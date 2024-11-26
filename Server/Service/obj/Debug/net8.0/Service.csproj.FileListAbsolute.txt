@@ -1,0 +1,14 @@
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\bin\Debug\net8.0\Service.deps.json
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\bin\Debug\net8.0\Service.runtimeconfig.json
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\bin\Debug\net8.0\Service.dll
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\bin\Debug\net8.0\Service.pdb
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\obj\Debug\net8.0\Service.csproj.AssemblyReference.cache
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\obj\Debug\net8.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\obj\Debug\net8.0\Service.AssemblyInfoInputs.cache
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\obj\Debug\net8.0\Service.dll
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\obj\Debug\net8.0\refint\Service.dll
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\obj\Debug\net8.0\Service.pdb
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\obj\Debug\net8.0\Service.genruntimeconfig.cache
+D:\Work\My_Projects\OnlineCourseManagement\Server\Service\obj\Debug\net8.0\ref\Service.dll
