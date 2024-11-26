@@ -1,0 +1,14 @@
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\bin\Debug\net8.0\Core.deps.json
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\bin\Debug\net8.0\Core.runtimeconfig.json
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\bin\Debug\net8.0\Core.dll
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\bin\Debug\net8.0\Core.pdb
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\obj\Debug\net8.0\Core.csproj.AssemblyReference.cache
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\obj\Debug\net8.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\obj\Debug\net8.0\Core.AssemblyInfoInputs.cache
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\obj\Debug\net8.0\Core.AssemblyInfo.cs
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\obj\Debug\net8.0\Core.csproj.CoreCompileInputs.cache
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\obj\Debug\net8.0\Core.dll
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\obj\Debug\net8.0\refint\Core.dll
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\obj\Debug\net8.0\Core.pdb
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\obj\Debug\net8.0\Core.genruntimeconfig.cache
+D:\Work\My_Projects\OnlineCourseManagement\Server\Core\obj\Debug\net8.0\ref\Core.dll
