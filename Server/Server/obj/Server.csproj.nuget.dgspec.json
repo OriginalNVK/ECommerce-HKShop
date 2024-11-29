@@ -39,11 +39,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -120,9 +115,6 @@
             "projectReferences": {
               "D:\\Work\\My_Projects\\OnlineCourseManagement\\Server\\Core\\Core.csproj": {
                 "projectPath": "D:\\Work\\My_Projects\\OnlineCourseManagement\\Server\\Core\\Core.csproj"
-              },
-              "D:\\Work\\My_Projects\\OnlineCourseManagement\\Server\\Service\\Service.csproj": {
-                "projectPath": "D:\\Work\\My_Projects\\OnlineCourseManagement\\Server\\Service\\Service.csproj"
               }
             }
           }
@@ -131,11 +123,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -226,11 +213,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -311,18 +293,20 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Work\\My_Projects\\OnlineCourseManagement\\Server\\Core\\Core.csproj": {
+                "projectPath": "D:\\Work\\My_Projects\\OnlineCourseManagement\\Server\\Core\\Core.csproj"
+              },
+              "D:\\Work\\My_Projects\\OnlineCourseManagement\\Server\\Data\\Data.csproj": {
+                "projectPath": "D:\\Work\\My_Projects\\OnlineCourseManagement\\Server\\Data\\Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {

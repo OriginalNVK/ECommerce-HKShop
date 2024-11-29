@@ -9,7 +9,6 @@
       "Server/1.0.0": {
         "dependencies": {
           "Core": "1.0.0",
-          "Data": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",
           "Microsoft.EntityFrameworkCore.Design": "9.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
@@ -1136,10 +1135,10 @@
       },
       "Data/1.0.0": {
         "dependencies": {
+          "Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
-          "Microsoft.Extensions.Hosting.Abstractions": "9.0.0",
-          "Service": "1.0.0"
+          "Microsoft.Extensions.Hosting.Abstractions": "9.0.0"
         },
         "runtime": {
           "Data.dll": {}
@@ -1147,6 +1146,8 @@
       },
       "Service/1.0.0": {
         "dependencies": {
+          "Core": "1.0.0",
+          "Data": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "9.0.0"

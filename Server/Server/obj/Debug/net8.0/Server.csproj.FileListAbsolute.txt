@@ -175,3 +175,4 @@ D:\Work\My_Projects\OnlineCourseManagement\Server\Server\bin\Debug\net8.0\Servic
 D:\Work\My_Projects\OnlineCourseManagement\Server\Server\bin\Debug\net8.0\Core.pdb
 D:\Work\My_Projects\OnlineCourseManagement\Server\Server\bin\Debug\net8.0\Data.pdb
 D:\Work\My_Projects\OnlineCourseManagement\Server\Server\bin\Debug\net8.0\Service.pdb
+D:\Work\My_Projects\OnlineCourseManagement\Server\Server\obj\Debug\net8.0\Server.sourcelink.json
