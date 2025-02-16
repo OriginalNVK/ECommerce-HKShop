@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\Work\HShop\HShop\HShop
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Work/HShop/HShop/HShop/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Work/HShop/HShop/HShop/Views/HangHoaController1/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYUNvbnRyb2xsZXIxXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
