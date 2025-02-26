@@ -590,3 +590,5 @@ D:\Work\HShop\HShop\HShop\bin\Debug\net8.0\refs\WindowsBase.dll
 D:\Work\HShop\HShop\HShop\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 D:\Work\HShop\HShop\HShop\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 D:\Work\HShop\HShop\HShop\obj\Debug\net8.0\HShop.MvcApplicationPartsAssemblyInfo.cs
+D:\Work\HShop\HShop\HShop\bin\Debug\net8.0\AutoMapper.dll
+D:\Work\HShop\HShop\HShop\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -1,4 +1,5 @@
 using HShop.Data;
+using HShop.Helpers;
 using Microsoft.EntityFrameworkCore;
 
 namespace HShop
@@ -24,6 +25,8 @@ namespace HShop
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
+
+            builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
             var app = builder.Build();
 
