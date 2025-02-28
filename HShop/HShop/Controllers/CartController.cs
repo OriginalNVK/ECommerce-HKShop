@@ -2,6 +2,7 @@
 using HShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using HShop.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HShop.Controllers
 {
@@ -58,6 +59,17 @@ namespace HShop.Controllers
                 HttpContext.Session.Set(MyConstant.CART_KEY, gioHang);
             }
             return RedirectToAction("Index");
+        }
+
+        [Authorize]
+        public IActionResult Checkout()
+        {
+            if (Cart.Count == 0)
+            {
+                return Redirect("/");
+            }
+            
+            return View(Cart);
         }
     }
 }

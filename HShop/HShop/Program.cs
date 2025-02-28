@@ -1,5 +1,6 @@
-using HShop.Data;
+﻿using HShop.Data;
 using HShop.Helpers;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 namespace HShop
@@ -28,6 +29,12 @@ namespace HShop
 
             builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+            {
+                options.LoginPath = "/KhachHang/DangNhap";
+                options.AccessDeniedPath = "/AccessDenied"; // Đã đăng nhập rồi 
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -43,7 +50,7 @@ namespace HShop
 
             app.UseRouting();
             app.UseSession();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

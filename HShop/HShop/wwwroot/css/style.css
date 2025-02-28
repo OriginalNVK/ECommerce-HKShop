@@ -69,6 +69,12 @@
     transition: 0.5s;
 }
 
+.btn-hover-danger:hover {
+    background-color: var(--bs-danger) !important; /* ??i n?n thành màu danger */
+    border-color: white !important; /* ??i vi?n thành màu tr?ng */
+    color: white !important; /* ??i màu ch? thành tr?ng */
+}
+
 .btn.border-secondary:hover {
     background: var(--bs-secondary) !important;
     color: var(--bs-white) !important;
