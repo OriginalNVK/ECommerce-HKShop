@@ -1,4 +1,4 @@
-
+Ôªø
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
@@ -70,9 +70,9 @@
 }
 
 .btn-hover-danger:hover {
-    background-color: var(--bs-danger) !important; /* ??i n?n th‡nh m‡u danger */
-    border-color: white !important; /* ??i vi?n th‡nh m‡u tr?ng */
-    color: white !important; /* ??i m‡u ch? th‡nh tr?ng */
+    background-color: var(--bs-danger) !important; /* ??i n?n th√†nh m√†u danger */
+    border-color: white !important; /* ??i vi?n th√†nh m√†u tr?ng */
+    color: white !important; /* ??i m√†u ch? th√†nh tr?ng */
 }
 
 .btn.border-secondary:hover {
@@ -500,4 +500,25 @@
     line-height: 35px;
 }
 /*** Footer End ***/
+
+.text-gradient {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, #99FFFF 0%, #FFFFFF 50%, #99FFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Dropdown ch·ªânh m√†u */
+.dropdown-menu {
+    min-width: 150px;
+    border-radius: 5px;
+    border: none;
+}
+
+.dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
 

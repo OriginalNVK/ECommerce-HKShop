@@ -62,6 +62,7 @@ namespace HShop.Controllers
         }
 
         [Authorize]
+        [HttpGet]
         public IActionResult Checkout()
         {
             if (Cart.Count == 0)
@@ -69,6 +70,70 @@ namespace HShop.Controllers
                 return Redirect("/");
             }
             
+            return View(Cart);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult Checkout(CheckoutVM model)
+        {
+            if (ModelState.IsValid)
+            {
+                var customerID = HttpContext.User.Claims.SingleOrDefault(p => p.Type == MyConstant.CLAIM_CUSTOMERID).Value;
+                var khachHang = new KhachHang();
+                if (model.GiongKhachHang)
+                {
+                    khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == customerID);
+                }
+                var HoaDon = new HoaDon()
+                {
+                    MaKh = customerID,
+                    HoTen = model.HoTen ?? khachHang.HoTen,
+                    DiaChi = model.DiaChi ?? khachHang.DiaChi,
+                    DienThoai = model.DienThoai ?? khachHang.DienThoai,
+                    NgayDat = DateTime.Now,
+                    CachThanhToan = "COD",
+                    CachVanChuyen = "Grab",
+                    MaTrangThai = 0,
+                    GhiChu = model.GhiChu
+                };
+
+                db.Database.BeginTransaction();
+                try
+                {
+                    
+                    
+                    db.Add(HoaDon);
+                    db.SaveChanges();
+
+                    var cthds = new List<ChiTietHd>();
+                    foreach(var item in Cart)
+                    {
+                        cthds.Add(new ChiTietHd()
+                        {
+                            MaHd = HoaDon.MaHd,
+                            SoLuong = item.SoLuong,
+                            DonGia = item.DonGia,
+                            MaHh = item.MaHH,
+                            GiamGia = 0
+                        });
+                    }
+                    db.AddRange(cthds);
+                    db.SaveChanges();
+					db.Database.CommitTransaction();
+					HttpContext.Session.Set<List<CartItem>>(MyConstant.CART_KEY, new List<CartItem>());
+                    return View("Success");
+                }
+                catch
+                {
+                    Console.WriteLine("Have Error");
+                }
+            }
+            if (Cart.Count == 0)
+            {
+                return Redirect("/");
+            }
+
             return View(Cart);
         }
     }
