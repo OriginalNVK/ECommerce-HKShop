@@ -5,7 +5,7 @@
 
 <div class="container-fluid py-5">
 	<div class="container py-5">
-		<h1 class="mb-4">Đăng nhập</h1>
+		<h1 class="mb-4 mt-4">Đăng nhập</h1>
 		<form asp-action="DangNhap" asp-route-returnurl="@ViewBag.ReturnUrl">
 			<div class="text-danger" asp-validation-summary="All"></div>
 			<div class="row">
@@ -25,9 +25,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="row g-4 text-center align-items-center justify-content-center pt-4">
+				<div class="row g-4 text-center align-items-center justify-content-center pt-4 mt-4">
 					<button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Đăng Nhập</button>
-					<button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Đăng ký</button>
+					<a asp-action="DangKy" asp-controller="KhachHang" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Đăng ký</a>
 					<a asp-controller="KhachHang" asp-action="QuenMatKhau" class="btn border-danger btn-hover-danger">Quên mật khẩu</a>
 				</div>
 			</div>

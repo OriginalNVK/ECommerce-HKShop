@@ -5,8 +5,8 @@
       "PackagePath": "staticwebassets\\HShop.bundle.scp.css"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\404.html",
-      "PackagePath": "staticwebassets\\404.html"
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\.gitattributes",
+      "PackagePath": "staticwebassets\\.gitattributes"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\HangHoa\\1009.gif",
@@ -499,6 +499,18 @@
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\divider.gif",
       "PackagePath": "staticwebassets\\Hinh\\divider.gif"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\heropage\\header_headphone_image.png",
+      "PackagePath": "staticwebassets\\Hinh\\heropage\\header_headphone_image.png"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\heropage\\jbl_soundbox_image.png",
+      "PackagePath": "staticwebassets\\Hinh\\heropage\\jbl_soundbox_image.png"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\heropage\\macbook_image.png",
+      "PackagePath": "staticwebassets\\Hinh\\heropage\\macbook_image.png"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\icons\\Accept.png",
@@ -1213,6 +1225,14 @@
       "PackagePath": "staticwebassets\\Hinh\\icons\\vit.gif"
     },
     {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\README.md",
+      "PackagePath": "staticwebassets\\README.md"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\blank.html",
+      "PackagePath": "staticwebassets\\blank.html"
+    },
+    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\cart.html",
       "PackagePath": "staticwebassets\\cart.html"
     },
@@ -1221,24 +1241,72 @@
       "PackagePath": "staticwebassets\\chackout.html"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\contact.html",
-      "PackagePath": "staticwebassets\\contact.html"
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\checkout.html",
+      "PackagePath": "staticwebassets\\checkout.html"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\css\\nouislider.min.css",
+      "PackagePath": "staticwebassets\\css\\nouislider.min.css"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\css\\slick-theme.css",
+      "PackagePath": "staticwebassets\\css\\slick-theme.css"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\css\\slick.css",
+      "PackagePath": "staticwebassets\\css\\slick.css"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\fonts\\slick.eot"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\fonts\\slick.svg"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\fonts\\slick.woff"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\img\\avatar.jpg",
@@ -1369,12 +1437,28 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\js\\jquery.zoom.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.zoom.min.js"
+    },
+    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\js\\nouislider.min.js",
+      "PackagePath": "staticwebassets\\js\\nouislider.min.js"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\js\\slick.min.js"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -1687,6 +1771,10 @@
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\lib\\waypoints\\waypoints.min.js",
       "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\product.html",
+      "PackagePath": "staticwebassets\\product.html"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\scss\\bootstrap.scss",
@@ -2017,16 +2105,8 @@
       "PackagePath": "staticwebassets\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\shop-detail.html",
-      "PackagePath": "staticwebassets\\shop-detail.html"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\shop.html",
-      "PackagePath": "staticwebassets\\shop.html"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\testimonial.html",
-      "PackagePath": "staticwebassets\\testimonial.html"
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\store.html",
+      "PackagePath": "staticwebassets\\store.html"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HShop.Microsoft.AspNetCore.StaticWebAssets.props",
