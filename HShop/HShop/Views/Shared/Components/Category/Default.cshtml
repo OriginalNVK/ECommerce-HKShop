@@ -1,0 +1,12 @@
+﻿@model IEnumerable<HShop.ViewModels.MenuLoaiVM>;
+@{
+}
+
+@foreach (var item in Model)
+{
+	<li>
+		<a asp-controller="HangHoa" asp-action="Index" asp-route-loai="@item.MaLoai">
+			<i class="fas fa-apple-alt me-2"></i> @item.TenLoai
+		</a>
+	</li>
+}

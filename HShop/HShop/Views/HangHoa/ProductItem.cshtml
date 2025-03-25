@@ -1,10 +1,18 @@
 ﻿@model IEnumerable<HShop.ViewModels.HangHoaVM>
 
+<div class="flex-center">
+	<h3 class="m-0">Có @Model.Count() sản phẩm</h3>
 
-<h3>Có @Model.Count() sản phẩm</h3>
+	<div class="mb-3">
+		<h4 class="mb-2">Price</h4>
+		<input type="range" class="form-range w-100" id="rangeInput" name="rangeInput" min="0" max="500" value="0" oninput="amount.value=rangeInput.value">
+		<output id="amount" name="amount" for="rangeInput">0</output>
+	</div>
+</div>
+
 <!-- Single Page Header End -->
 <!-- Fruits Shop Start-->
-@foreach (var item in Model)
+@* @foreach (var item in Model)
 {
     <div class="col-md-6 col-lg-6 col-xl-4">
         <div class="rounded position-relative fruite-item">
@@ -26,4 +34,60 @@
             </div>
         </div>
     </div>
+} *@
+
+@foreach (var item in Model)
+{
+	<div class="col-md-3 col-xs-6">
+		<div class="product">
+			<div class="product-img">
+				<a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh">
+					<img src="~/Hinh/HangHoa/@item.Hinh" class="img-fluid w-small" alt="@item.TenHH">
+				</a>
+				@* <div class="product-label">
+			@if (item.GiamGia > 0)
+			{
+			<span class="sale">-@item.GiamGia%</span>
+			}
+			<span class="new">NEW</span>
+			</div> *@
+			</div>
+			<div class="product-body">
+				<p class="product-category">@item.TenLoai</p>
+				<h3 class="product-name">
+					<a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh">@item.TenHH</a>
+				</h3>
+				@* <h4 class="product-price">
+			$@item.DonGia
+			@if (item.GiaGoc > item.DonGia)
+			{
+			<del class="product-old-price">$@item.GiaGoc</del>
+			}
+			</h4>
+			<div class="product-rating">
+			@for (int i = 0; i < 5; i++)
+			{
+			if (i < item.DanhGia)
+			{
+			<i class="fa fa-star"></i>
+			}
+			else
+			{
+			<i class="fa fa-star-o"></i>
+			}
+			}
+			</div> *@
+				<div class="product-btns">
+					<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+					<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+					<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+				</div>
+			</div>
+			<div class="add-to-cart">
+				<a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.MaHh" class="add-to-cart-btn">
+					<i class="fa fa-shopping-cart"></i> add to cart
+				</a>
+			</div>
+		</div>
+	</div>
 }
