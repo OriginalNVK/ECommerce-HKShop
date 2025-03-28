@@ -2,11 +2,39 @@
 @{
 }
 
-@foreach (var item in Model)
-{
-	<li>
-		<a asp-controller="HangHoa" asp-action="Index" asp-route-loai="@item.MaLoai">
-			<i class="fas fa-apple-alt me-2"></i> @item.TenLoai
-		</a>
-	</li>
-}
+<div id="responsive-nav">
+	<!-- NAV -->
+	<ul class="main-nav nav navbar-nav">
+		<li><a href="/">Trang chủ</a></li>
+		<li><a href="/HangHoa">Cửa hàng</a></li>
+		@foreach (var item in Model)
+		{
+			<li>
+				<a asp-controller="HangHoa" asp-action="Index" asp-route-MaLoai="@item.MaLoai">
+					<i class="fas fa-apple-alt me-2"></i> @item.TenLoai
+				</a>
+			</li>
+		}
+	</ul>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Lấy URL hiện tại
+        const currentUrl = window.location.pathname + window.location.search;
+
+        // Lấy tất cả các thẻ <a> trong menu
+        const navLinks = document.querySelectorAll(".main-nav a");
+
+        navLinks.forEach(link => {
+            // Lấy href của thẻ <a>
+            const linkUrl = link.getAttribute("href");
+
+            // So sánh URL hiện tại với href
+            if (currentUrl === linkUrl || (currentUrl === "/" && linkUrl === "/")) {
+                // Thêm class "active" vào thẻ <li> cha
+                link.parentElement.classList.add("active");
+            }
+        });
+    });
+</script>

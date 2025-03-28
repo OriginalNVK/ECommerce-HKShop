@@ -17,21 +17,34 @@
             }
         </ul>
     </div>
-</div> *@
+</div> 
 <form class="flex-center">
     <select class="input-select">
-        <option value="0">All Categories</option>
+        <option value="0">Danh mục</option>
         @foreach (var item in Model)
         {
             <option value="@item.MaLoai">
-                <a asp-controller="HangHoa" asp-action="Index" asp-route-loai="@item.MaLoai">
+                <a asp-controller="HangHoa" asp-action="Index" asp-route-id="@item.MaLoai">
                     <i class="fas fa-apple-alt me-2"></i>@item.TenLoai
                 </a>
             </option>
         }
     </select>
 
-        @await Html.PartialAsync("TimKiemPanel")
-     @* <input class="input" placeholder="Search here">
-    <button class="search-btn">Search</button> *@
+        @* @await Html.PartialAsync("TimKiemPanel") 
+
+    <input class="input" placeholder="Search here">
+     <button class="search-btn">Search</button>
+</form>*@
+
+<form class="flex-center" method="get" asp-controller="HangHoa" asp-action="Index">
+    <select class="input-select" name="MaLoai">
+        <option value="0">Danh mục</option>
+        @foreach(var item in Model)
+        {
+            <option value="@item.MaLoai">@item.TenLoai</option>
+        }
+    </select>
+    <input type="search" class="input form-control p-3" placeholder="Search here" aria-describedby="search-icon-1" name="keyword">
+    <button type="submit" class="search-btn"><span id="search-icon-1" class="input-group-text p-3">Search</span></button>
 </form>

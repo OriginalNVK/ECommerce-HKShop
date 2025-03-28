@@ -335,6 +335,19 @@ CREATE TABLE [dbo].[YeuThich](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
+CREATE TABLE [dbo].[Cart](
+    [MaCart] [int] IDENTITY(1,1) NOT NULL,
+    [MaKH] [nvarchar](20) NOT NULL,
+    [MaHH] [int] NOT NULL,
+    [SoLuong] [int] NOT NULL,
+    [DonGia] [float] NOT NULL,
+    [NgayThem] [datetime] NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT [PK_Cart] PRIMARY KEY CLUSTERED ([MaCart] ASC),
+    CONSTRAINT [FK_Cart_KhachHang] FOREIGN KEY ([MaKH]) REFERENCES [dbo].[KhachHang] ([MaKH]),
+    CONSTRAINT [FK_Cart_HangHoa] FOREIGN KEY ([MaHH]) REFERENCES [dbo].[HangHoa] ([MaHH])
+) ON [PRIMARY]
+GO
 SET IDENTITY_INSERT [dbo].[ChiTietHD] ON 
 
 INSERT [dbo].[ChiTietHD] ([MaCT], [MaHD], [MaHH], [DonGia], [SoLuong], [GiamGia]) VALUES (100001, 10248, 1011, 14, 12, 0)

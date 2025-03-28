@@ -74,6 +74,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ0hvYVxTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Work/HShop/HShop/HShop/Views/Home/blank.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxibGFuay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Work/HShop/HShop/HShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -98,8 +102,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Work/HShop/HShop/HShop/Views/Shared/Components/Cart/CartPanel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFxDYXJ0UGFuZWwuY3NodG1s
+[D:/Work/HShop/HShop/HShop/Views/Shared/Components/CartPanel/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFBhbmVsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work/HShop/HShop/HShop/Views/Shared/Components/Category/Default.cshtml]
@@ -108,6 +112,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Work/HShop/HShop/HShop/Views/Shared/Components/MenuLoai/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudUxvYWlcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work/HShop/HShop/HShop/Views/Shared/Components/NewProducts/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmV3UHJvZHVjdHNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work/HShop/HShop/HShop/Views/Shared/Error.cshtml]

@@ -1,0 +1,133 @@
+﻿@model HShop.ViewModels.NewProductsModel
+
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- section title -->
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h3 class="title">Sản phẩm mới</h3>
+                    <div class="section-nav">
+                        <ul class="section-tab-nav tab-nav">
+                            @foreach (var item in Model.Categories)
+                            {
+                                <li class="@(Model.Categories.First() == item ? "active" : "")">
+                                    <a data-toggle="tab" href="#tab-@item.MaLoai">@item.TenLoai</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /section title -->
+            <!-- Products tab & slick -->
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="products-tabs">
+                        @foreach (var category in Model.Categories)
+                        {
+                            <div id="tab-@category.MaLoai" class="tab-pane @(Model.Categories.First() == category ? "active" : "")">
+                                <div class="products-slick" data-nav="#slick-nav-@category.MaLoai">
+                                    @foreach (var product in category.Products)
+                                    {
+                                        <div class="product">
+                                            <div class="product-img">
+                                                <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@product.MaHh">
+                                                    <img src="~/Hinh/HangHoa/@product.Hinh" class="img-fluid w-small" alt="@product.TenHH">
+                                                </a>
+                                                @if (product.GiamGia > 0)
+                                                {
+                                                    <div class="product-label">
+                                                        <span class="sale">---@product.GiamGia%</span>
+                                                    </div>
+                                                }
+                                                <div class="product-label">
+                                                    <span class="new">NEW</span>
+                                                </div>
+                                            </div>
+                                            <div class="product-body">
+                                                <p class="product-category">@category.TenLoai</p>
+                                                <h3 class="product-name">
+                                                    <a asp-controller="HangHoa" asp-action="Detail" asp-route-id="@product.MaHh">@product.TenHH</a>
+                                                </h3>
+                                                <h4 class="product-price">
+                                                    $@((product.DonGia * (1 - product.GiamGia / 100)).ToString("#,##0.00"))
+                                                    @if (product.GiamGia > 0)
+                                                    {
+                                                        <del class="product-old-price">$@product.DonGia.ToString("#,##0.00")</del>
+                                                    }
+                                                </h4>
+                                                <div class="product-rating">
+                                                    <!-- Thêm logic hiển thị sao nếu có trong DB -->
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                </div>
+                                                <div class="product-btns d-flex gap-2 mx-1">
+                                                    <a asp-action="AddToWishlist" asp-controller="HangHoa" asp-route-id="@product.MaHh" class="add-to-wishlist">
+                                                        <i class="fa fa-heart-o"></i><span class="tooltipp">Yêu thích</span>
+                                                    </a>
+                                                    <a asp-action="AddToCompare" asp-controller="HangHoa" asp-route-id="@product.MaHh" class="add-to-compare">
+                                                        <i class="fa fa-exchange"></i><span class="tooltipp">So sánh</span>
+                                                    </a>
+                                                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@product.MaHh" class="quick-view">
+                                                        <i class="fa fa-eye"></i><span class="tooltipp">Chi tiết</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="add-to-cart">
+                                                <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@product.MaHh" class="add-to-cart-btn">
+                                                    <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+                                                </a>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                                <div id="slick-nav-@category.MaLoai" class="products-slick-nav"></div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- /Products tab & slick -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+<script>
+    $(document).ready(function () {
+        $('.products-slick').each(function () {
+            $(this).slick({
+                slidesToShow: 4, // Hiển thị 4 sản phẩm cùng lúc
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                arrows: true,
+                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                nextArrow: '<button type="button" class="slick-next">Next</button>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    });
+</script>

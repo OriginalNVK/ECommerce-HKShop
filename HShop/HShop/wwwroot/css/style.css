@@ -979,7 +979,7 @@ textarea.input {
                 background-color: #E4E7ED;
             }
 
-        .product .product-body .product-btns > button {
+        .product .product-body .product-btns > a {
             position: relative;
             width: 40px;
             height: 40px;
@@ -990,13 +990,13 @@ textarea.input {
             transition: 0.2s all;
         }
 
-            .product .product-body .product-btns > button:hover {
+            .product .product-body .product-btns > a:hover {
                 background-color: #E4E7ED;
                 color: #D10024;
                 border-radius: 50%;
             }
 
-            .product .product-body .product-btns > button .tooltipp {
+            .product .product-body .product-btns > a .tooltipp {
                 position: absolute;
                 bottom: 100%;
                 left: 50%;
@@ -1017,7 +1017,7 @@ textarea.input {
                 transition: 0.2s all;
             }
 
-            .product .product-body .product-btns > button:hover .tooltipp {
+            .product .product-body .product-btns > a:hover .tooltipp {
                 opacity: 1;
                 visibility: visible;
                 -webkit-transform: translate(-50%, -5px);
@@ -1077,7 +1077,7 @@ textarea.input {
             background-color: #FFF;
             color: #D10024;
             border-color: #D10024;
-            padding: 0px 30px 0px 50px;
+            padding: 0px 30px 0px 35px;
         }
 
             .product .add-to-cart .add-to-cart-btn:hover > i {
@@ -2238,6 +2238,10 @@ img.w-small{
     align-items: center;
 }
 
+.mx-1{
+    margin-left: 45px;
+}
+
 .mx-3 {
     margin-left: 150px;
 }
@@ -2262,8 +2266,20 @@ img.w-small{
     margin-top: 8px;
 }
 
+.mt-4{
+    margin-top: 20px;
+}
+
+.mt-3{
+    margin-top: 16px;
+}
+
 .gap-1 {
     gap: 4px;
+}
+
+.gap-2{
+    gap: 8px;
 }
 
 .success-section {
@@ -2314,3 +2330,77 @@ img.w-small{
     background-color: #8e98a1;
     transition: 0.3s ease-in-out;
 }
+
+.border-danger {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: white;
+}
+
+.btn-hover-danger:hover {
+    background-color: white !important;
+    color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    transition: 0.3s ease-in-out;
+}
+
+.border-primary {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important; /* Màu xanh mặc định của Bootstrap */
+    color: white;
+}
+
+.border-hover-primary:hover {
+    background-color: white !important;
+    color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    transition: 0.3s ease-in-out;
+}
+
+.my-3{
+    margin: 10px 0px;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.bg-blue{
+    background-color: dodgerblue;
+    color: white
+}
+
+    .bg-blue:hover {
+        background-color: #FFF;
+        color: dodgerblue;
+        border-color: dodgerblue;
+        transition: 0.3s ease-in-out;
+    }
+
+    .mb-2{
+        margin-bottom: 15px;
+    }
+
+.bg-red {
+    background-color: #D10024;
+    color: white;
+}
+
+    .bg-red:hover {
+        background-color: white;
+        border-color: #D10024;
+        color: #D10024;
+        transition: 0.3s ease-in-out;
+    }
+
+    .w-60{
+        width: 60%;
+    }
+
+    .w-40{
+        width: 40%;
+    }
+
+    .h-80{
+        height: 500px;
+    }

@@ -5,48 +5,42 @@
 <!-- Checkout Page Start -->
 <div class="container-fluid py-5">
 	<div class="container py-5">
-		<h1 class="mb-4">Billing details</h1>
+		<h1 class="mb-4 mt-2 text-center" style="color: #D10024">Chi tiết hóa đơn</h1>
 		<form asp-action="Checkout" asp-controller="Cart" method="post">
 			<div class="row g-5">
-					<div class="col-md-12 col-lg-6 col-xl-7">
-						<div class="form-check my-3">
-							<input type="checkbox" class="form-check-input" name="GiongKhachHang" value="false" id="GiongKhachHang" />
-							<label class="form-check-label" for="GiongKhachHang">Giống thông tin khách hàng?</label>
-						</div>
+				<div class="col-md-12 col-lg-6 col-xl-7">
+					<div class="form-check my-3">
+						<input type="checkbox" class="form-check-input" name="GiongKhachHang" value="false" id="GiongKhachHang" />
+						<label class="form-check-label" for="GiongKhachHang">Giống thông tin khách hàng?</label>
+					</div>
 
-						<div class="form-item">
-							<label class="form-label my-3 delivery-info">Người nhận hàng<sup>*</sup></label>
-							<input type="text" name="HoTen" class="form-control">
-						</div>
+					<div class="form-item">
+						<label class="form-label my-3 delivery-info">Người nhận hàng<sup>*</sup></label>
+						<input type="text" name="HoTen" class="form-control">
+					</div>
 
-						<div class="form-item">
-							<label class="form-label my-3 delivery-info">Địa chỉ nhận hàng <sup>*</sup></label>
-							<input type="text" name="DiaChi" class="form-control" placeholder="KTX khu B, DHQG">
-						</div>
+					<div class="form-item">
+						<label class="form-label my-3 delivery-info">Địa chỉ nhận hàng <sup>*</sup></label>
+						<input type="text" name="DiaChi" class="form-control" placeholder="KTX khu B, DHQG">
+					</div>
 
-						<div class="form-item">
-							<label class="form-label my-3 delivery-info">Điện thoại<sup>*</sup></label>
-							<input type="text" name="DienThoai" class="form-control">
-						</div>
+					<div class="form-item">
+						<label class="form-label my-3 delivery-info">Điện thoại<sup>*</sup></label>
+						<input type="text" name="DienThoai" class="form-control">
+					</div>
 
-						<hr />
+					<hr />
 
-						<div class="form-item">
-							<textarea name="GhiChu" class="form-control" spellcheck="false" cols="30" rows="11" placeholder="Ghi chú"></textarea>
-						</div>
-
-						<div class="row g-4 text-center align-items-center justify-content-center pt-4">
-							<button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">
-								Đặt hàng
-							</button>
-						</div>
+					<div class="form-item">
+						<textarea name="GhiChu" class="form-control" spellcheck="false" cols="30" rows="11" placeholder="Ghi chú"></textarea>
+					</div>
 				</div>
 				<div class="col-md-12 col-lg-6 col-xl-5">
 					<div class="table-responsive">
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col">Products</th>	
+									<th scope="col">Products</th>
 									<th scope="col">Name</th>
 									<th scope="col">Price</th>
 									<th scope="col">Quantity</th>
@@ -120,39 +114,42 @@
 							</tbody>
 						</table>
 					</div>
-					<div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
-						<div class="col-12">
-							<div class="form-check text-start my-3">
-								<input type="checkbox" class="form-check-input bg-primary border-0" id="Transfer-1" name="Transfer" value="Transfer">
-								<label class="form-check-label" for="Transfer-1">Direct Bank Transfer</label>
-							</div>
-							<p class="text-start text-dark">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+				</div>
+			</div>
+			<!-- Hàng cho phương thức thanh toán -->
+			<div class="row g-4 justify-content-center border-bottom py-3 my-3">
+				<div class="col-md-12 col-xl-7 text-center">
+					<div class="flex-wrap flex-center gap-4">
+						<!-- Direct Bank Transfer -->
+						<div>
+							<input type="radio" class="form-check-input bg-primary border-0" id="Transfer-1" name="PaymentMethod" value="Transfer">
+							<label class="form-check-label" for="Transfer-1">Direct Bank Transfer</label>
+						</div>
+						<!-- Check Payments -->
+						<div>
+							<input type="radio" class="form-check-input bg-primary border-0" id="Payments-1" name="PaymentMethod" value="Payments">
+							<label class="form-check-label" for="Payments-1">Check Payments</label>
+						</div>
+						<!-- Cash On Delivery -->
+						<div>
+							<input type="radio" class="form-check-input bg-primary border-0" id="Delivery-1" name="PaymentMethod" value="Delivery">
+							<label class="form-check-label" for="Delivery-1">Cash On Delivery</label>
+						</div>
+						<!-- Paypal -->
+						<div>
+							<input type="radio" class="form-check-input bg-primary border-0" id="Paypal-1" name="PaymentMethod" value="Paypal">
+							<label class="form-check-label" for="Paypal-1">Paypal</label>
 						</div>
 					</div>
-					<div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
-						<div class="col-12">
-							<div class="form-check text-start my-3">
-								<input type="checkbox" class="form-check-input bg-primary border-0" id="Payments-1" name="Payments" value="Payments">
-								<label class="form-check-label" for="Payments-1">Check Payments</label>
-							</div>
-						</div>
-					</div>
-					<div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
-						<div class="col-12">
-							<div class="form-check text-start my-3">
-								<input type="checkbox" class="form-check-input bg-primary border-0" id="Delivery-1" name="Delivery" value="Delivery">
-								<label class="form-check-label" for="Delivery-1">Cash On Delivery</label>
-							</div>
-						</div>
-					</div>
-					<div class="row g-4 text-center align-items-center justify-content-center border-bottom py-3">
-						<div class="col-12">
-							<div class="form-check text-start my-3">
-								<input type="checkbox" class="form-check-input bg-primary border-0" id="Paypal-1" name="Paypal" value="Paypal">
-								<label class="form-check-label" for="Paypal-1">Paypal</label>
-							</div>
-						</div>
-					</div>
+				</div>
+			</div>
+
+			<!-- Hàng cho nút đặt hàng -->
+			<div class="row g-4 justify-content-center py-3">
+				<div class="col-12 text-center">
+					<button type="submit" class="btn bg-red w-40 text-uppercase mb-2">
+						Đặt hàng
+					</button>
 				</div>
 			</div>
 		</form>

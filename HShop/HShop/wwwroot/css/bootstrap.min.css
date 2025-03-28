@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -7216,6 +7216,7 @@ img.w-small{
     width: 97%;
 }
 
+
 /*.position-fixed {
     position: fixed !important;
 }*/
@@ -7237,3 +7238,4 @@ img.w-small{
     justify-content: space-between;
     align-items: center;
 }
+

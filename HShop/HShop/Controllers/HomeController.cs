@@ -34,5 +34,11 @@ namespace HShop.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [Route("/blank")]
+        public IActionResult Blank()
+        {
+            return View();
+        }
     }
 }

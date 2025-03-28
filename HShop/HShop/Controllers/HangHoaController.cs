@@ -10,16 +10,21 @@ namespace HShop.Controllers
         private readonly Hshop2023Context db;
 
         public HangHoaController(Hshop2023Context context) => db = context;
-        public IActionResult Index(int? loai)
+        public IActionResult Index(int? MaLoai, string? keyword)
         {
             var HangHoas = db.HangHoas.AsQueryable();
+            var result = new List<HangHoaVM>();
 
-            if(loai.HasValue)
+            if (MaLoai.HasValue && MaLoai.Value != 0)
             {
-                HangHoas = HangHoas.Where(p => p.MaLoai == loai.Value);
+                HangHoas = HangHoas.Where(p => p.MaLoai == MaLoai.Value);
+            }
+            else if (!string.IsNullOrEmpty(keyword))
+            {
+                HangHoas = HangHoas.Where(p => p.TenHh.Contains(keyword));
             }
 
-            var result = HangHoas.Select(p => new HangHoaVM
+            result = HangHoas.Select(p => new HangHoaVM
             {
                 MaHh = p.MaHh,
                 TenHH = p.TenHh,
@@ -27,28 +32,7 @@ namespace HShop.Controllers
                 Hinh = p.Hinh ?? "",
                 MoTaNgan = p.MoTaDonVi ?? "",
                 TenLoai = p.MaLoaiNavigation.TenLoai
-            });
-            return View(result);
-        }
-
-        public IActionResult Search(string query)
-        {
-            var HangHoas = db.HangHoas.AsQueryable();
-
-            if (query != null)
-            {
-                HangHoas = HangHoas.Where(p => p.TenHh.Contains(query));
-            }
-
-            var result = HangHoas.Select(p => new HangHoaVM
-            {
-                MaHh = p.MaHh,
-                TenHH = p.TenHh,
-                DonGia = p.DonGia ?? 0,
-                Hinh = p.Hinh ?? "",
-                MoTaNgan = p.MoTaDonVi ?? "",
-                TenLoai = p.MaLoaiNavigation.TenLoai
-            });
+            }).ToList();
             return View(result);
         }
 

@@ -17,6 +17,8 @@ public partial class Hshop2023Context : DbContext
 
     public virtual DbSet<BanBe> BanBes { get; set; }
 
+    public virtual DbSet<Cart> Carts { get; set; }
+
     public virtual DbSet<ChiTietHd> ChiTietHds { get; set; }
 
     public virtual DbSet<ChuDe> ChuDes { get; set; }
@@ -52,8 +54,7 @@ public partial class Hshop2023Context : DbContext
     public virtual DbSet<YeuThich> YeuThiches { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=ORIGINALNVK\\SQLEXPRESS;Database=Hshop2023;User ID=sa;Password=27072004;Encrypt=False;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Name=HShop");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -81,6 +82,31 @@ public partial class Hshop2023Context : DbContext
             entity.HasOne(d => d.MaKhNavigation).WithMany(p => p.BanBes)
                 .HasForeignKey(d => d.MaKh)
                 .HasConstraintName("FK_BanBe_KhachHang");
+        });
+
+        modelBuilder.Entity<Cart>(entity =>
+        {
+            entity.HasKey(e => e.MaCart);
+
+            entity.ToTable("Cart");
+
+            entity.Property(e => e.MaHh).HasColumnName("MaHH");
+            entity.Property(e => e.MaKh)
+                .HasMaxLength(20)
+                .HasColumnName("MaKH");
+            entity.Property(e => e.NgayThem)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+
+            entity.HasOne(d => d.MaHhNavigation).WithMany(p => p.Carts)
+                .HasForeignKey(d => d.MaHh)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Cart_HangHoa");
+
+            entity.HasOne(d => d.MaKhNavigation).WithMany(p => p.Carts)
+                .HasForeignKey(d => d.MaKh)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Cart_KhachHang");
         });
 
         modelBuilder.Entity<ChiTietHd>(entity =>

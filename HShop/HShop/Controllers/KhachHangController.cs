@@ -47,7 +47,7 @@ namespace HShop.Controllers
                         khachHang.Hinh = MyUtil.UpLoadHinh(Hinh, "KhachHang");
                     }
 
-                    db.Add(khachHang);
+                    db.KhachHangs.Add(khachHang);
                     db.SaveChanges();
                     return RedirectToAction("Index", "HangHoa");
                 }

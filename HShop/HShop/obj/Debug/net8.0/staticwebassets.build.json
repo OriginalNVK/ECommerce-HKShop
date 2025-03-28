@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JI7GTRyA+P9/nagKLuBzevGXuhyqJuIXnAcEy9MJlD8=",
+  "Hash": "EM48NPlNnUc82+ugiUq6bjfXxION6GvhuRp9hgxUROg=",
   "Source": "HShop",
   "BasePath": "_content/HShop",
   "Mode": "Default",
@@ -4976,6 +4976,25 @@
       "OriginalItemSpec": "wwwroot\\Hinh\\icons\\Zoom.png"
     },
     {
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\284845095_700511087909695_1893654197215617806_n.jpg",
+      "SourceId": "HShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
+      "BasePath": "_content/HShop",
+      "RelativePath": "Hinh/KhachHang/284845095_700511087909695_1893654197215617806_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\284845095_700511087909695_1893654197215617806_n.jpg"
+    },
+    {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\62df58f8-52e6-4eb0-82d9-1376c7b93591.jpeg",
       "SourceId": "HShop",
       "SourceType": "Discovered",
@@ -4993,6 +5012,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\62df58f8-52e6-4eb0-82d9-1376c7b93591.jpeg"
+    },
+    {
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\8b3992cc-29dd-4502-987b-76e909faa4a7.jpeg",
+      "SourceId": "HShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
+      "BasePath": "_content/HShop",
+      "RelativePath": "Hinh/KhachHang/8b3992cc-29dd-4502-987b-76e909faa4a7.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\8b3992cc-29dd-4502-987b-76e909faa4a7.jpeg"
     },
     {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\android_300200.png",
@@ -5774,12 +5812,12 @@
       "OriginalItemSpec": "wwwroot\\img\\hotdeal.png"
     },
     {
-      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\img\\logo.png",
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\img\\logoweb.png",
       "SourceId": "HShop",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
       "BasePath": "_content/HShop",
-      "RelativePath": "img/logo.png",
+      "RelativePath": "img/logoweb.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -5790,7 +5828,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\logo.png"
+      "OriginalItemSpec": "wwwroot\\img\\logoweb.png"
     },
     {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\img\\product01.png",

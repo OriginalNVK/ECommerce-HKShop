@@ -1,0 +1,49 @@
+﻿@model HShop.ViewModels.CartModel
+
+<!-- Cart -->
+<div class="dropdown">
+    <a class="dropdown-toggle cursor" data-toggle="dropdown" aria-expanded="true">
+        <i class="fa fa-shopping-cart"></i>
+        <span>Giỏ hàng</span>
+        <span class="qty">@Model.Quantity</span>
+    </a>
+    <div class="cart-dropdown">
+        <div class="cart-list">
+            @if (Model.Items != null && Model.Items.Any())
+            {
+                @foreach (var item in Model.Items)
+                {
+                    <div class="product-widget">
+                        <div class="product-img">
+                            <img src="~/Hinh/HangHoa/@item.Hinh" alt="@item.TenHH">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name"><a href="#">@item.TenHH</a></h3>
+                            <h4 class="product-price"><span class="qty">@item.SoLuong x</span>$@item.DonGia.ToString("#,##0.00")</h4>
+                        </div>
+                        <form asp-action="RemoveCart" asp-controller="Cart" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@item.MaHH" />
+                            <button type="submit" class="delete"
+                                    onclick="return confirm('Bạn có chắc muốn xóa @item.TenHH khỏi giỏ hàng không?');">
+                                <i class="fa fa-close"></i>
+                            </button>
+                        </form>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Giỏ hàng trống</p>
+            }
+        </div>
+        <div class="cart-summary">
+            <small>@Model.Quantity Item(s) selected</small>
+            <h5>SUBTOTAL: $@Model.Total.ToString("#,##0.00")</h5>
+        </div>
+        <div class="cart-btns">
+            <a href="/Cart">View Cart</a>
+            <a href="/Cart/Checkout">Checkout <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+</div>
+<!-- /Cart -->

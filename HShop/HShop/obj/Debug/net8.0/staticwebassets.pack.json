@@ -225,8 +225,16 @@
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Camera1.jpg"
     },
     {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\284845095_700511087909695_1893654197215617806_n.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\284845095_700511087909695_1893654197215617806_n.jpg"
+    },
+    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\62df58f8-52e6-4eb0-82d9-1376c7b93591.jpeg",
       "PackagePath": "staticwebassets\\Hinh\\KhachHang\\62df58f8-52e6-4eb0-82d9-1376c7b93591.jpeg"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\8b3992cc-29dd-4502-987b-76e909faa4a7.jpeg",
+      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\8b3992cc-29dd-4502-987b-76e909faa4a7.jpeg"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\Author.jpg",
@@ -1205,8 +1213,8 @@
       "PackagePath": "staticwebassets\\img\\hotdeal.png"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\img\\logo.png",
-      "PackagePath": "staticwebassets\\img\\logo.png"
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\img\\logoweb.png",
+      "PackagePath": "staticwebassets\\img\\logoweb.png"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\img\\product01.png",
