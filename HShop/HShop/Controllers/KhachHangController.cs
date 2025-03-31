@@ -30,7 +30,7 @@ namespace HShop.Controllers
         }
 
         [HttpPost]
-        public IActionResult DangKy(RegisterVM model, IFormFile Hinh)
+        public async Task<IActionResult> DangKy(RegisterVM model, IFormFile? Hinh)
         {
             if(ModelState.IsValid)
             {
@@ -47,8 +47,8 @@ namespace HShop.Controllers
                         khachHang.Hinh = MyUtil.UpLoadHinh(Hinh, "KhachHang");
                     }
 
-                    db.KhachHangs.Add(khachHang);
-                    db.SaveChanges();
+                    await db.KhachHangs.AddAsync(khachHang);
+                    await db.SaveChangesAsync();
                     return RedirectToAction("Index", "HangHoa");
                 }
                 catch (Exception ex) {

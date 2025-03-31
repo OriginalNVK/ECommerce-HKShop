@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EM48NPlNnUc82+ugiUq6bjfXxION6GvhuRp9hgxUROg=",
+  "Hash": "vlAA3WJQxmm2Yymg7UI+ZjWAyOcJPvsgitaXdFPGg/4=",
   "Source": "HShop",
   "BasePath": "_content/HShop",
   "Mode": "Default",
@@ -4993,6 +4993,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\284845095_700511087909695_1893654197215617806_n.jpg"
+    },
+    {
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\436297862_449324097469326_1193953976604596524_n.jpg",
+      "SourceId": "HShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
+      "BasePath": "_content/HShop",
+      "RelativePath": "Hinh/KhachHang/436297862_449324097469326_1193953976604596524_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\436297862_449324097469326_1193953976604596524_n.jpg"
     },
     {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\62df58f8-52e6-4eb0-82d9-1376c7b93591.jpeg",
