@@ -10,7 +10,7 @@ namespace HShop.Controllers
         private readonly Hshop2023Context db;
 
         public HangHoaController(Hshop2023Context context) => db = context;
-        public IActionResult Index(int? MaLoai, string? keyword)
+        public async Task<IActionResult> Index(int? MaLoai, string? keyword)
         {
             var HangHoas = db.HangHoas.AsQueryable();
             var result = new List<HangHoaVM>();
@@ -24,7 +24,7 @@ namespace HShop.Controllers
                 HangHoas = HangHoas.Where(p => p.TenHh.Contains(keyword));
             }
 
-            result = HangHoas.Select(p => new HangHoaVM
+            result = await HangHoas.Select(p => new HangHoaVM
             {
                 MaHh = p.MaHh,
                 TenHH = p.TenHh,
@@ -32,15 +32,15 @@ namespace HShop.Controllers
                 Hinh = p.Hinh ?? "",
                 MoTaNgan = p.MoTaDonVi ?? "",
                 TenLoai = p.MaLoaiNavigation.TenLoai
-            }).ToList();
+            }).ToListAsync();
             return View(result);
         }
 
-        public IActionResult Detail(int id)
+        public async Task<IActionResult> Detail(int id)
         {
-            var data = db.HangHoas
+            var data = await db.HangHoas
                 .Include(p => p.MaLoaiNavigation)
-                .SingleOrDefault(p => p.MaHh == id);
+                .SingleOrDefaultAsync(p => p.MaHh == id);
             if(data == null)
             {
                 TempData["Message"] = $"Không thấy sản phẩm có mã {id}";
