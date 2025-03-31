@@ -261,10 +261,6 @@
       "PackagePath": "staticwebassets\\Hinh\\KhachHang\\woman.jpg"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai11.jpeg",
-      "PackagePath": "staticwebassets\\Hinh\\Loai11.jpeg"
-    },
-    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Accept.png",
       "PackagePath": "staticwebassets\\Hinh\\Loai\\Accept.png"
     },
@@ -341,10 +337,6 @@
       "PackagePath": "staticwebassets\\Hinh\\Loai\\agenda_1.jpg"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loaiimages.jpeg",
-      "PackagePath": "staticwebassets\\Hinh\\Loaiimages.jpeg"
-    },
-    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\NhaCC\\Acer_logo-300x300.gif",
       "PackagePath": "staticwebassets\\Hinh\\NhaCC\\Acer_logo-300x300.gif"
     },
@@ -399,10 +391,6 @@
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Others\\shopping_cart.png",
       "PackagePath": "staticwebassets\\Hinh\\Others\\shopping_cart.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\divider.gif",
-      "PackagePath": "staticwebassets\\Hinh\\divider.gif"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\heropage\\header_headphone_image.png",
@@ -1147,6 +1135,10 @@
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\checkout.html",
       "PackagePath": "staticwebassets\\checkout.html"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\css\\admin_style.css",
+      "PackagePath": "staticwebassets\\css\\admin_style.css"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\css\\bootstrap.min.css",

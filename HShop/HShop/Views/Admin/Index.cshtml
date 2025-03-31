@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Dashboard";
+}
+<div class="section-title">
+    <h3 class="title">Welcome, Admin!</h3>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Quản lý đơn hàng</h5>
+                <p class="card-text">Xem và cập nhật trạng thái đơn hàng.</p>
+                <a href="@Url.Action("Orders", "Admin")" class="primary-btn">Xem ngay</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Quản lý hàng hóa</h5>
+                <p class="card-text">Thêm, sửa, xóa sản phẩm.</p>
+                <a href="@Url.Action("Products", "Admin")" class="primary-btn">Xem ngay</a>
+            </div>
+        </div>
+    </div>
+</div>

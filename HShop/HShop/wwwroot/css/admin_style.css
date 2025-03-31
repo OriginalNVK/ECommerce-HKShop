@@ -1,0 +1,85 @@
+﻿/* Thêm style mới cho layout admin */
+.admin-nav {
+    background-color: #FFF;
+    border-right: 1px solid #E4E7ED;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.nav-header {
+    padding: 20px;
+    background-color: #15161D;
+    color: #FFF;
+    text-align: center;
+}
+
+    .nav-header h3 {
+        color: #FFF;
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+.nav-menu {
+    padding: 20px 0;
+}
+
+    .nav-menu .nav-item {
+        padding: 12px 20px;
+        border-left: 3px solid transparent;
+        transition: all 0.2s;
+    }
+
+        .nav-menu .nav-item:hover {
+            background-color: #FBFBFC;
+            border-left: 3px solid #D10024;
+        }
+
+        .nav-menu .nav-item a {
+            color: #2B2D42;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+        }
+
+        .nav-menu .nav-item.active {
+            background-color: #FBFBFC;
+            border-left: 3px solid #D10024;
+        }
+
+            .nav-menu .nav-item.active a {
+                color: #D10024;
+            }
+
+.user-info {
+    padding: 15px 20px;
+    border-top: 1px solid #E4E7ED;
+    background-color: #FFF;
+}
+
+    .user-info p {
+        margin: 0;
+        font-weight: 500;
+        color: #2B2D42;
+    }
+
+.admin-content {
+    background-color: #FBFBFC;
+    padding: 20px;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E4E7ED;
+}
+
+    .content-header h2 {
+        color: #2B2D42;
+        margin: 0;
+        font-weight: 700;
+    }
