@@ -5,6 +5,7 @@ using HShop.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace HShop.Controllers
 {
@@ -14,38 +15,46 @@ namespace HShop.Controllers
 
         public CartController(Hshop2023Context context) => db = context;
 
-        private List<CartItem> GetCart()
+        private async Task<List<CartItem>> GetCart()
         {
             var maKH = HttpContext.User.Identity.IsAuthenticated ? HttpContext.User.FindFirst(MyConstant.CLAIM_CUSTOMERID)?.Value : "Guest";
             if(maKH == "Guest")
             {
                 return null;
             }
-            var CartItems = db.Carts.Where(c => c.MaKh == maKH).Select(c => new CartItem
+            var CartItems = await db.Carts.Where(c => c.MaKh == maKH).Select(c => new CartItem
             {
                 MaHH = c.MaHh,
                 TenHH = c.MaHhNavigation.TenHh,
                 DonGia = c.DonGia,
                 SoLuong = c.SoLuong,
                 Hinh = c.MaHhNavigation.Hinh
-            }).ToList();
+            }).ToListAsync();
             return CartItems;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var cartItems = GetCart();
+            var cartItems = await GetCart();
+            if(cartItems == null)
+            {
+                return Redirect("/KhachHang/DangNhap");
+            }
             return View(cartItems);
         }
 
-        public IActionResult AddToCart(int id, int quantity = 1)
+        public async Task<IActionResult> AddToCart(int id, int quantity = 1)
         {
             var maKH = HttpContext.User.Identity.IsAuthenticated ? HttpContext.User.FindFirst(MyConstant.CLAIM_CUSTOMERID)?.Value : "Guest";
 
-            var item = db.Carts.FirstOrDefault(c => c.MaKh == maKH && c.MaHh == id);
+            if(maKH == "Guest")
+            {
+				return Redirect("/KhachHang/DangNhap");
+			}
+            var item = await db.Carts.FirstOrDefaultAsync(c => c.MaKh == maKH && c.MaHh == id);
             if(item == null)
             {
-                var hangHoa = db.HangHoas.SingleOrDefault(p => p.MaHh == id);
+                var hangHoa = await db.HangHoas.SingleOrDefaultAsync(p => p.MaHh == id);
                 if(hangHoa == null)
                 {
                     TempData["Message"] = $"Không tìm thấy hàng hóa có mã {id}";
@@ -59,7 +68,7 @@ namespace HShop.Controllers
                     SoLuong = quantity,    
                     NgayThem = DateTime.Now,
                 };
-                db.Carts.Add(item);
+                await db.Carts.AddAsync(item);
             }
             else
             {
@@ -67,18 +76,19 @@ namespace HShop.Controllers
                 db.Carts.Update(item);
             }
 
-            db.SaveChanges();
+            await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
-        public IActionResult RemoveCart(int id)
+        [Authorize]
+        public async Task<IActionResult> RemoveCart(int id)
         {
             var maKH = HttpContext.User.Identity.IsAuthenticated ? HttpContext.User.FindFirst(MyConstant.CLAIM_CUSTOMERID)?.Value : "Guest";
-            var item = db.Carts.FirstOrDefault(c => c.MaKh == maKH && c.MaHh == id);
+            var item = await db.Carts.FirstOrDefaultAsync(c => c.MaKh == maKH && c.MaHh == id);
             if (item != null)
             {
                 db.Carts.Remove(item);
-                db.SaveChanges();
+                await db.SaveChangesAsync();
             }
             return RedirectToAction("Index");
         }
@@ -106,16 +116,16 @@ namespace HShop.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult Checkout(CheckoutVM model)
+        public async Task<IActionResult> Checkout(CheckoutVM model)
         {
             var customerID = HttpContext.User.Claims.SingleOrDefault(p => p.Type == MyConstant.CLAIM_CUSTOMERID).Value;
-            var Carts = db.Carts.Where(c => c.MaKh == customerID).ToList();
+            var Carts = await db.Carts.Where(c => c.MaKh == customerID).ToListAsync();
             if (ModelState.IsValid)
             {
                 var khachHang = new KhachHang();
                 if (model.GiongKhachHang)
                 {
-                    khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == customerID);
+                    khachHang = await db.KhachHangs.SingleOrDefaultAsync(kh => kh.MaKh == customerID);
                 }
                 var HoaDon = new HoaDon()
                 {
@@ -133,8 +143,8 @@ namespace HShop.Controllers
                 db.Database.BeginTransaction();
                 try
                 {
-                    db.Add(HoaDon);
-                    db.SaveChanges();
+                    await db.AddAsync(HoaDon);
+                    await db.SaveChangesAsync();
                     var cthds = new List<ChiTietHd>();
                     foreach(var item in Carts)
                     {
@@ -147,9 +157,9 @@ namespace HShop.Controllers
                             GiamGia = 0
                         });
                     }
-                    db.ChiTietHds.AddRange(cthds);
+                    await db.ChiTietHds.AddRangeAsync(cthds);
                     db.Carts.RemoveRange(Carts);
-                    db.SaveChanges();
+                    await db.SaveChangesAsync();
 					db.Database.CommitTransaction();
                     return View("Success");
                 }
@@ -159,14 +169,14 @@ namespace HShop.Controllers
                 }
             }
 
-            var CartItems = db.Carts.Where(c => c.MaKh == customerID).Select(c => new CartItem
+            var CartItems = await db.Carts.Where(c => c.MaKh == customerID).Select(c => new CartItem
             {
                 MaHH = c.MaHh,
                 TenHH = c.MaHhNavigation.TenHh,
                 DonGia = c.DonGia,
                 SoLuong = c.SoLuong,
                 Hinh = c.MaHhNavigation.Hinh
-            }).ToList();
+            }).ToListAsync();
             if (CartItems.Count == 0)
             {
                 return Redirect("/");
