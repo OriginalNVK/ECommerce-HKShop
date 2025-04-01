@@ -102,7 +102,7 @@
 
 .admin-content {
     background-color: #FBFBFC;
-    padding: 20px;
+/*    padding: 20px;*/
     height: 100vh;
     overflow-y: auto; /* Cho phép cuộn nội dung */
 }
@@ -112,8 +112,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    padding: 20px;
-    padding-bottom: 21px;
+    padding: 30px 0px;
     border-bottom: 2px solid #E4E7ED;
 }
 
@@ -189,7 +188,70 @@
     border-color: #17a2b8;
 }
 
-.btn-warning {
-    background-color: #ffc107;
-    border-color: #ffc107;
+.btn-delete {
+    background-color: #f15151;
+    border-color: #f15151;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #fa7575;
+    border-color: #f15151;
+    color: white;
+}
+
+.bg-dark{
+    background-color: #1f2137 !important;
+    color: white !important;
+    padding: 10px 0 !important;
+}
+
+.admin-content span.copyright{
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.admin-content span.copyright a{
+    color: #D10024;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+}
+
+.admin-content span.copyright a:hover{
+    color: #ff002b;
+    font-weight: 1000;
+}
+
+m-4{
+    margin: 20px;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+}
+
+.btn-success{
+    margin-left: 20px;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.btn-success:hover{
+    background-color: white;
+    color: #5cb85c;
+    border: 1px solid #5cb85c;
+    transition: all 0.3s ease;
 }

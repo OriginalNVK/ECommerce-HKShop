@@ -97,9 +97,9 @@ namespace HShop.Controllers
                                 new Claim(ClaimTypes.Email, khachHang.Email),
                                 new Claim(ClaimTypes.Name, khachHang.HoTen),
                                 new Claim(MyConstant.CLAIM_CUSTOMERID, khachHang.MaKh),
-
-                                //claim role - động
-                                new Claim(ClaimTypes.Role, "Customer")
+                                new Claim(ClaimTypes.Role, khachHang.VaiTro.ToString()),
+                                ////claim role - động
+                                //new Claim(ClaimTypes.Role, "Customer")
                             };
 
                             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -112,7 +112,11 @@ namespace HShop.Controllers
                             }
                             else
                             {
-                                return Redirect("/");
+                                return khachHang.VaiTro switch
+                                {
+                                    0 => Redirect("/"),
+                                    1 => Redirect("/admin"),
+                                };
                             }
                         }
                     }

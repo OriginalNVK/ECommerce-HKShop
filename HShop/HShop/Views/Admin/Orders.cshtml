@@ -42,14 +42,14 @@
                             </td>
                             <td>@item.DienThoai</td>
                             <td>
-                                <div class="btn-group d-flex gap-2" role="group">
+                                <div class="btn-group d-flex justify-center gap-2" role="group">
                                     <a asp-action="Detail" asp-controller="Orders" asp-route-id="@item.MaHd"
                                        class="btn btn-sm btn-info" title="Xem chi tiết">
                                         <i class="fa fa-eye"></i>
                                     </a>
-                                    <a asp-action="Update" asp-controller="Orders" asp-route-id ="@item.MaHd"
-                                       class="btn btn-sm btn-warning" title="Cập nhật">
-                                        <i class="fa fa-edit"></i>
+                                    <a asp-action="Delete" asp-controller="Orders" asp-route-id="@item.MaHd"
+                                       class="btn btn-sm btn-delete" title="Xóa đơn hàng">
+                                        <i class="fa fa-trash"></i>
                                     </a>
                                 </div>
                             </td>
@@ -61,38 +61,18 @@
     </div>
 </div>
 
-@* <!-- Modal Xem chi tiết -->
-<div class="modal fade" id="chiTietModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Nội dung modal sẽ được load bằng AJAX -->
-</div>
-
-<!-- Modal Cập nhật -->
-<div class="modal fade" id="capNhatModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Nội dung modal sẽ được load bằng AJAX -->
-</div>
-
 @section Scripts {
     <script>
         $(document).ready(function () {
-            $('#hoaDonTable').DataTable({
-                "language": {
-                    "url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/Vietnamese.json"
+            $('.btn-delete').click(function (e) {
+                e.preventDefault(); // Ngăn chặn hành vi mặc định
+                var deleteUrl = $(this).attr('href'); // Lấy URL từ thẻ a
+
+                // Hiển thị hộp thoại confirm
+                if (confirm('Bạn có chắc chắn muốn xóa đơn hàng này?')) {
+                    window.location.href = deleteUrl; // Chuyển hướng nếu đồng ý
                 }
-            });
-
-            // Xử lý click nút xem chi tiết - chuyển hướng trực tiếp
-            $(document).on('click', '.btn-info', function (e) {
-                e.preventDefault();
-                var url = $(this).attr('href');
-                window.location.href = url;
-            });
-
-            // Xử lý click nút cập nhật - chuyển hướng trực tiếp
-            $(document).on('click', '.btn-warning', function (e) {
-                e.preventDefault();
-                var url = $(this).attr('href');
-                window.location.href = url;
             });
         });
     </script>
-} *@
+}

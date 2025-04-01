@@ -31,27 +31,27 @@
 
                 <div class="nav-menu">
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Dashboard" ? "active" : "")">
-                        <a href="@Url.Action("Dashboard", "Admin")">
+                        <a asp-action="Index" asp-controller="Admin">
                             <i class="fa fa-dashboard"></i> Dashboard
                         </a>
                     </div>
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Products" ? "active" : "")">
-                        <a href="@Url.Action("Products", "Admin")">
+                        <a asp-action="Products" asp-controller="Admin">
                             <i class="fa fa-cube"></i> Quản lý hàng hóa
                         </a>
                     </div>
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Orders" ? "active" : "")">
-                        <a href="@Url.Action("Orders", "Admin")">
+                        <a asp-action="Orders" asp-controller="Admin">
                             <i class="fa fa-shopping-cart"></i> Quản lý đơn hàng
                         </a>
                     </div>
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Clients" ? "active" : "")">
-                        <a href="@Url.Action("Clients", "Admin")">
+                        <a asp-action="Clients" asp-controller="Admin">
                             <i class="fa fa-users"></i> Quản lý khách hàng
                         </a>
                     </div>
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Settings" ? "active" : "")">
-                        <a href="@Url.Action("Settings", "Admin")">
+                        <a asp-action="Settings" asp-controller="Admin">
                             <i class="fa fa-cog"></i> Settings
                         </a>
                     </div>
@@ -68,7 +68,7 @@
             <!-- Main Content -->
             <div class="col-lg-10 col-md-9 col-sm-12 admin-content">
                 <div class="content-header">
-                    <h2>@ViewBag.Title</h2>
+                    <h2 class="text-uppercase">@ViewBag.Title</h2>
                     <div class="header-search">
                         <form class="flex-center" method="get" asp-controller="Admin" asp-action="Search">
                             <input type="search" class="input form-control p-3" placeholder="Search here" aria-describedby="search-icon-1" name="keyword">
@@ -78,6 +78,11 @@
                 </div>
 
                 @RenderBody()
+                <span class="copyright bg-dark text-center">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy; 2025 All rights reserved | Website được tạo bởi <a href="https://web.facebook.com/vankhanh.47.2004" target="_blank">Original NVK <i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </span>
             </div>
         </div>
     </div>
