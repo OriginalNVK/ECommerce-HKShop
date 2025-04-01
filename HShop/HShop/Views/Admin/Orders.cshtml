@@ -1,0 +1,98 @@
+﻿@using HShop.Helpers
+@model IEnumerable<HShop.ViewModels.InvoiceVM>
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Quản lý đơn hàng";
+}
+<div class="card">
+    <div class="card-header">
+        <h4 class="mb-0 text-center" style="font-size: 20px">Danh sách đơn hàng</h4>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover" id="hoaDonTable">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Mã HD</th>
+                        <th>Ngày tạo</th>
+                        <th>Khách hàng</th>
+                        <th>Địa chỉ</th>
+                        <th>PT Thanh toán</th>
+                        <th>PT Vận chuyển</th>
+                        <th>Trạng thái</th>
+                        <th>Điện thoại</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.MaHd</td>
+                            <td>@item.NgayDat.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@item.HoTen</td>
+                            <td>@item.DiaChi</td>
+                            <td>@item.CachThanhToan</td>
+                            <td>@item.CachVanChuyen</td>
+                            <td>
+                                <span class="badge-@item.TrangThai">
+                                    @MyUtil.convertStatus(item.TrangThai)
+                                </span>
+                            </td>
+                            <td>@item.DienThoai</td>
+                            <td>
+                                <div class="btn-group d-flex gap-2" role="group">
+                                    <a asp-action="Detail" asp-controller="Orders" asp-route-id="@item.MaHd"
+                                       class="btn btn-sm btn-info" title="Xem chi tiết">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a asp-action="Update" asp-controller="Orders" asp-route-id ="@item.MaHd"
+                                       class="btn btn-sm btn-warning" title="Cập nhật">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@* <!-- Modal Xem chi tiết -->
+<div class="modal fade" id="chiTietModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Nội dung modal sẽ được load bằng AJAX -->
+</div>
+
+<!-- Modal Cập nhật -->
+<div class="modal fade" id="capNhatModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Nội dung modal sẽ được load bằng AJAX -->
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#hoaDonTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/Vietnamese.json"
+                }
+            });
+
+            // Xử lý click nút xem chi tiết - chuyển hướng trực tiếp
+            $(document).on('click', '.btn-info', function (e) {
+                e.preventDefault();
+                var url = $(this).attr('href');
+                window.location.href = url;
+            });
+
+            // Xử lý click nút cập nhật - chuyển hướng trực tiếp
+            $(document).on('click', '.btn-warning', function (e) {
+                e.preventDefault();
+                var url = $(this).attr('href');
+                window.location.href = url;
+            });
+        });
+    </script>
+} *@

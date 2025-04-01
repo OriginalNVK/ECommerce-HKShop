@@ -21,12 +21,12 @@
     @RenderSection("Styles", required: false)
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-admin">
         <div class="row">
-            <!-- Admin Navigation - chiếm 2 cột trên desktop, 3 cột trên tablet -->
+            <!-- Admin Navigation -->
             <div class="col-lg-2 col-md-3 col-sm-12 admin-nav">
                 <div class="nav-header">
-                    <h3>HK SHOP</h3>
+                    <h1 class="text-gradient">HK SHOP</h1>
                 </div>
 
                 <div class="nav-menu">
@@ -45,6 +45,11 @@
                             <i class="fa fa-shopping-cart"></i> Quản lý đơn hàng
                         </a>
                     </div>
+                    <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Clients" ? "active" : "")">
+                        <a href="@Url.Action("Clients", "Admin")">
+                            <i class="fa fa-users"></i> Quản lý khách hàng
+                        </a>
+                    </div>
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Settings" ? "active" : "")">
                         <a href="@Url.Action("Settings", "Admin")">
                             <i class="fa fa-cog"></i> Settings
@@ -54,16 +59,22 @@
 
                 <div class="user-info">
                     <p>Hello, @User.Identity.Name</p>
-                    <a href="@Url.Action("Logout", "Account")" class="btn btn-sm btn-outline-danger mt-2">
+                    <a href="@Url.Action("Logout", "Account")" class="btn btn-sm">
                         <i class="fa fa-sign-out"></i> Đăng xuất
                     </a>
                 </div>
             </div>
 
-            <!-- Main Content - chiếm 10 cột trên desktop, 9 cột trên tablet, 12 cột trên mobile -->
+            <!-- Main Content -->
             <div class="col-lg-10 col-md-9 col-sm-12 admin-content">
                 <div class="content-header">
                     <h2>@ViewBag.Title</h2>
+                    <div class="header-search">
+                        <form class="flex-center" method="get" asp-controller="Admin" asp-action="Search">
+                            <input type="search" class="input form-control p-3" placeholder="Search here" aria-describedby="search-icon-1" name="keyword">
+                            <button type="submit" class="search-btn"><span id="search-icon-1" class="input-group-text p-3">Search</span></button>
+                        </form>
+                    </div>
                 </div>
 
                 @RenderBody()
@@ -71,6 +82,19 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery Plugins -->
+    <script src="~/js/jquery.min.js"></script>
+    @* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script> *@
+    <script src="~/js/slick.min.js"></script>
+    <script src="~/js/nouislider.min.js"></script>
+    <script src="~/js/jquery.zoom.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Bootstrap JS (Nếu dùng Bootstrap 5) -->
+    @* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> *@
+
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

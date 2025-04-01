@@ -30,6 +30,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Work/HShop/HShop/HShop/Views/Admin/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Work/HShop/HShop/HShop/Views/Cart/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -106,6 +110,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Work/HShop/HShop/HShop/Views/Orders/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Work/HShop/HShop/HShop/Views/Shared/Components/CartPanel/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2FydFBhbmVsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -124,10 +132,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Work/HShop/HShop/HShop/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Work/HShop/HShop/HShop/Views/Shared/TimKiemPanel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFRpbUtpZW1QYW5lbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work/HShop/HShop/HShop/Views/Shared/_DanhSachHangHoa.cshtml]

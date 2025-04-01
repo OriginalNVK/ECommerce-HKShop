@@ -2,7 +2,7 @@
 
 namespace HShop.Helpers
 {
-    public class MyUtil
+    public static class MyUtil
     {
 
         public static string UpLoadHinh(IFormFile Hinh, string folder)
@@ -31,6 +31,25 @@ namespace HShop.Helpers
                 sb.Append(pattern[rd.Next(0, pattern.Length)]);
             }
             return sb.ToString();
+        }
+
+        public static string convertStatus(string status)
+        {
+            switch (status)
+            {
+                case "cancelled":
+                    return "Đơn hàng đã bị hủy";
+                case "pending":
+                    return "Đơn hàng chưa được duyệt";
+                case "processing":
+                    return "Đơn hàng đang chờ giao";
+                case "paid":
+                    return "Đơn hàng đã được thanh toán";
+                case "completed":
+                    return "Đơn hàng đã hoàn thành";
+                default:
+                    return "Đơn hàng lỗi";
+            }
         }
     }
 }
