@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Work/HShop/HShop/HShop/Views/Admin/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Work/HShop/HShop/HShop/Views/Cart/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -112,6 +116,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Work/HShop/HShop/HShop/Views/Orders/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work/HShop/HShop/HShop/Views/Products/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Work/HShop/HShop/HShop/Views/Products/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Work/HShop/HShop/HShop/Views/Shared/Components/CartPanel/Default.cshtml]

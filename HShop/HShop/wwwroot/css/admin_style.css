@@ -255,3 +255,30 @@ m-4{
     border: 1px solid #5cb85c;
     transition: all 0.3s ease;
 }
+
+dt {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+dd {
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.card {
+    border-radius: 0.5rem;
+}
+
+.img-fluid {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

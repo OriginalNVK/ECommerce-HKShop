@@ -52,5 +52,32 @@ namespace HShop.Controllers
                           }).ToList();
             return View(result);
         }
+
+        [Route("/admin/products")]
+        public async Task<IActionResult> Products(int pageNumber = 1, int pageSize = 5)
+        {
+            var HangHoas = await db.HangHoas.Include(h=> h.MaLoaiNavigation).ToListAsync();
+            var HangHoaDTO = HangHoas.Select(h => new HangHoaVM
+            {
+                MaHh = h.MaHh,
+                TenHH = h.TenHh,
+                MoTaNgan = !string.IsNullOrEmpty(h.MoTa) ? h.MoTa : "Không có mô tả",
+				Hinh = !string.IsNullOrEmpty(h.Hinh) ? h.Hinh : null,
+                DonGia = h.DonGia ?? 0.0,
+                GiamGia = h.GiamGia,
+                TenLoai = h.MaLoaiNavigation.TenLoai,
+            }).ToList();
+            var Categories = await db.Loais.Select(l => new MenuLoaiVM
+            {
+                MaLoai = l.MaLoai,
+                TenLoai = l.TenLoai,
+                SoLuong = l.HangHoas.Count
+            }).ToListAsync();
+
+            ViewBag.Categories = Categories;    
+            var result = HangHoaDTO.Skip((pageNumber - 1)*pageSize).Take(pageSize).ToList();
+
+            return View(result);
+        }
     }
 }

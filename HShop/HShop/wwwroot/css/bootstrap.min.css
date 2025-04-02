@@ -7238,3 +7238,24 @@ img.w-small{
     align-items: center;
 }
 
+.pb-4{
+    padding-bottom: 10px;
+}
+
+.btn-secondary{
+    background-color: #c1e2b3;
+    border-color: #c1e2b3;
+}
+
+.btn-secondary:hover{
+    background-color: #a4d65e;
+    border-color: #a4d65e;
+    transition: 0.3s ease-in-out;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
