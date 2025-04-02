@@ -54,10 +54,17 @@ namespace HShop.Controllers
         }
 
         [Route("/admin/products")]
-        public async Task<IActionResult> Products(int pageNumber = 1, int pageSize = 5)
+        public async Task<IActionResult> Products(int pageNumber = 1, int pageSize = 5, int? maLoai = null)
         {
-            var HangHoas = await db.HangHoas.Include(h=> h.MaLoaiNavigation).ToListAsync();
-            var HangHoaDTO = HangHoas.Select(h => new HangHoaVM
+            var HangHoas = db.HangHoas.Include(h=> h.MaLoaiNavigation).AsQueryable();
+            if(maLoai.HasValue)
+            {
+                HangHoas = HangHoas.Where(h => h.MaLoai == maLoai.Value);
+            }
+            var totalProducts = await HangHoas.CountAsync();
+            var totalPages = (int)Math.Ceiling(totalProducts / (double)pageSize);
+
+            var HangHoaDTO = await HangHoas.Skip((pageNumber - 1)*pageSize).Take(pageSize).Select(h => new HangHoaVM
             {
                 MaHh = h.MaHh,
                 TenHH = h.TenHh,
@@ -66,7 +73,7 @@ namespace HShop.Controllers
                 DonGia = h.DonGia ?? 0.0,
                 GiamGia = h.GiamGia,
                 TenLoai = h.MaLoaiNavigation.TenLoai,
-            }).ToList();
+            }).ToListAsync();
             var Categories = await db.Loais.Select(l => new MenuLoaiVM
             {
                 MaLoai = l.MaLoai,
@@ -74,10 +81,13 @@ namespace HShop.Controllers
                 SoLuong = l.HangHoas.Count
             }).ToListAsync();
 
-            ViewBag.Categories = Categories;    
-            var result = HangHoaDTO.Skip((pageNumber - 1)*pageSize).Take(pageSize).ToList();
+            ViewBag.Categories = Categories;
+			ViewBag.CurrentPage = pageNumber;
+			ViewBag.TotalPages = totalPages;
+			ViewBag.PageSize = pageSize;
+			ViewBag.CurrentMaLoai = maLoai;
 
-            return View(result);
+			return View(HangHoaDTO);
         }
     }
 }

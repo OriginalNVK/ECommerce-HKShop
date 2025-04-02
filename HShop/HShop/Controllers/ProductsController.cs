@@ -62,6 +62,8 @@ namespace HShop.Controllers
 		}
 
 		// GET: HangHoas/Create
+
+		[Route("/admin/products/create")]
 		public IActionResult Create()
 		{
 			ViewData["MaLoai"] = new SelectList(db.Loais, "MaLoai", "MaLoai");
@@ -78,7 +80,7 @@ namespace HShop.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				db.Add(hangHoa);
+				await db.AddAsync(hangHoa);
 				await db.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}
