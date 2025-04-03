@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using HShop.Data;
 using HShop.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using HShop.Helpers;
 
 namespace HShop.Controllers
 {
@@ -63,6 +64,7 @@ namespace HShop.Controllers
 
 		// GET: HangHoas/Create
 
+		[HttpGet]
 		[Route("/admin/products/create")]
 		public IActionResult Create()
 		{
@@ -76,17 +78,41 @@ namespace HShop.Controllers
 		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Create([Bind("MaHh,TenHh,TenAlias,MaLoai,MoTaDonVi,DonGia,Hinh,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] HangHoa hangHoa)
+		public async Task<IActionResult> CreateProduct([Bind("MaHh,TenHh,TenAlias,MaLoai,MoTaDonVi,DonGia,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] ProductAdminVM hangHoa,
+			IFormFile Hinh)
 		{
 			if (ModelState.IsValid)
 			{
-				await db.AddAsync(hangHoa);
+				// Xử lý lưu ảnh
+				if (Hinh != null && Hinh.Length > 0)
+				{
+					hangHoa.Hinh = MyUtil.UpLoadHinh(Hinh, "HangHoa");
+				}
+				var product = new HangHoa
+				{
+					MaHh = hangHoa.MaHh,
+					TenHh = hangHoa.TenHh,
+					TenAlias = hangHoa.TenAlias,
+					MaLoai = hangHoa.MaLoai,
+					Hinh = hangHoa.Hinh,
+					MoTaDonVi = hangHoa.MoTaDonVi,
+					DonGia = hangHoa.DonGia,
+					NgaySx = hangHoa.NgaySx,
+					GiamGia = hangHoa.GiamGia,
+					SoLanXem = hangHoa.SoLanXem,
+					MoTa = hangHoa.MoTa,
+					MaNcc = hangHoa.MaNcc,
+				};
+
+				await db.HangHoas.AddAsync(product);
 				await db.SaveChangesAsync();
-				return RedirectToAction(nameof(Index));
+				return Redirect("/admin/products");
 			}
-			ViewData["MaLoai"] = new SelectList(db.Loais, "MaLoai", "MaLoai", hangHoa.MaLoai);
-			ViewData["MaNcc"] = new SelectList(db.NhaCungCaps, "MaNcc", "MaNcc", hangHoa.MaNcc);
-			return View(hangHoa);
+
+			// Nếu có lỗi, trả về View với dữ liệu cũ
+			ViewData["MaLoai"] = new SelectList(db.Loais, "MaLoai", "TenLoai", hangHoa.MaLoai);
+			ViewData["MaNcc"] = new SelectList(db.NhaCungCaps, "MaNcc", "TenNcc", hangHoa.MaNcc);
+			return Redirect("/admin/products/create");
 		}
 
 		// GET: HangHoas/Edit/5
@@ -145,7 +171,7 @@ namespace HShop.Controllers
 				existingProduct.MaLoai = product.MaLoai;
 				existingProduct.MoTaDonVi = product.MoTaDonVi;
 				existingProduct.DonGia = product.DonGia;
-				if(product.Hinh != null)
+				if (product.Hinh != null)
 				{
 					existingProduct.Hinh = product.Hinh;
 				}
@@ -175,30 +201,7 @@ namespace HShop.Controllers
 			}
 		}
 
-		// GET: HangHoas/Delete/5
-		public async Task<IActionResult> Delete(int? id)
-		{
-			if (id == null)
-			{
-				return NotFound();
-			}
-
-			var hangHoa = await db.HangHoas
-				.Include(h => h.MaLoaiNavigation)
-				.Include(h => h.MaNccNavigation)
-				.FirstOrDefaultAsync(m => m.MaHh == id);
-			if (hangHoa == null)
-			{
-				return NotFound();
-			}
-
-			return View(hangHoa);
-		}
-
-		// POST: HangHoas/Delete/5
-		[HttpPost, ActionName("Delete")]
-		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> DeleteConfirmed(int id)
+		public async Task<IActionResult> Delete(int id)
 		{
 			var hangHoa = await db.HangHoas.FindAsync(id);
 			if (hangHoa != null)
@@ -207,7 +210,7 @@ namespace HShop.Controllers
 			}
 
 			await db.SaveChangesAsync();
-			return RedirectToAction(nameof(Index));
+			return Redirect("/admin/products");
 		}
 
 		private bool HangHoaExists(int id)

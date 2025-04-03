@@ -10,10 +10,8 @@
 			<h2 class="m-0 font-weight-bold text-center">Thông tin hàng hóa</h2>
 		</div>
 		<div class="card-body mt-4">
-			<form asp-action="Create" class="form-horizontal">
-				<input type="hidden" name="id" value="@ViewContext.RouteData.Values["id"]" />
-				<div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
-				<input type="hidden" asp-for="MaHh" />
+			<form asp-action="CreateProduct" asp-controller="Products" class="form-horizontal" method="post" enctype="multipart/form-data" onsubmit="return validateForm(event)">
+				@* <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div> *@
 				<!-- Cột thông tin chính -->
 				<div class="d-flex">
 					<div class="col-md-5">
@@ -142,5 +140,35 @@
 @section Scripts {
 	@{
 		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+		<script>
+			function validateForm(event) {
+				const form = event.target;
+
+				// Kiểm tra client-side validation
+				if (!form.checkValidity()) {
+					const invalidFields = form.querySelectorAll(':invalid');
+					console.error("Form không hợp lệ. Lỗi tại các trường:");
+
+					invalidFields.forEach(field => {
+						console.error(`- ${field.name}: ${field.validationMessage}`);
+					});
+
+					return false; // Ngăn form submit
+				}
+
+				// Nếu dùng AJAX, có thể thêm xử lý ở đây
+				console.log("Form đang được submit...");
+				return true; // Cho phép submit
+			}
+
+			// (Tùy chọn) Log nếu có lỗi khi tải trang
+			document.addEventListener('DOMContentLoaded', () => {
+				const form = document.querySelector('form');
+				form.addEventListener('invalid', (event) => {
+					console.error(`Trường ${event.target.name} không hợp lệ:`, event.target.validationMessage);
+				}, true);
+			});
+		</script>
 	}
 }

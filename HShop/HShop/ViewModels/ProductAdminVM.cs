@@ -28,8 +28,8 @@ namespace HShop.ViewModels
 
         public string MaNcc { get; set; } = null!;
 
-        public virtual Loai MaLoaiNavigation { get; set; } = null!;
+        public virtual Loai? MaLoaiNavigation { get; set; }
 
-        public virtual NhaCungCap MaNccNavigation { get; set; } = null!;
+        public virtual NhaCungCap? MaNccNavigation { get; set; }
     }
 }

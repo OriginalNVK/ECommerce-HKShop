@@ -16,10 +16,12 @@ namespace HShop.Helpers
                 }
                 return Hinh.FileName;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                return String.Empty;
-            }
+				// Log lỗi (nếu cần)
+				Console.WriteLine($"Lỗi khi upload hình: {ex.Message}");
+				return string.Empty;
+			}
         }
         public static string GenerateRandomKey(int length = 5)
         {
