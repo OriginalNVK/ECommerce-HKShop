@@ -104,5 +104,23 @@ namespace HShop.Controllers
             }).ToListAsync();
             return View(result);
         }
+
+        [Route("/admin/suppliers")]
+        public async Task<IActionResult> Suppliers()
+        {
+            var listSuppliers = db.NhaCungCaps.AsQueryable();
+            var result = await listSuppliers.Select(s => new SupplierVM
+            {
+                MaNcc = s.MaNcc,
+                TenCongTy = s.TenCongTy,
+                Logo = s.Logo,
+                NguoiLienLac = s.NguoiLienLac,
+                Email = s.Email,
+                DienThoai = s.DienThoai,
+                DiaChi = s.DiaChi,
+                MoTa = s.MoTa,
+            }).ToListAsync();
+            return View(result);
+        }
     }
 }

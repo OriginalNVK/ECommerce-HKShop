@@ -253,116 +253,20 @@
       "PackagePath": "staticwebassets\\Hinh\\KhachHang\\8b3992cc-29dd-4502-987b-76e909faa4a7.jpeg"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\Author.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\Author.jpg"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\Penguins.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\Penguins.jpg"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\android_300200.png",
-      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\android_300200.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\man.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\man.jpg"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\woman.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\woman.jpg"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Accept.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Accept.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Alarm.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Alarm.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Anchor.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Anchor.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Bell.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Bell.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Best.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Best.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Billboard.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Billboard.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Bomb.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Bomb.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Brick house.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Brick house.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Bricks.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Bricks.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Buddy.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Buddy.png"
-    },
-    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Camera.jpg",
       "PackagePath": "staticwebassets\\Hinh\\Loai\\Camera.jpg"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Certificate.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Certificate.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Dice.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Dice.png"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\DienThoai.jpg",
       "PackagePath": "staticwebassets\\Hinh\\Loai\\DienThoai.jpg"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Dollar.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Dollar.png"
-    },
-    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\DongHo.jpg",
       "PackagePath": "staticwebassets\\Hinh\\Loai\\DongHo.jpg"
     },
     {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Favourites.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Favourites.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Funny.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Funny.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Heart.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Heart.png"
-    },
-    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Laptop.jpg",
       "PackagePath": "staticwebassets\\Hinh\\Loai\\Laptop.jpg"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Microsoft.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Microsoft.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Unlock.png",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\Unlock.png"
-    },
-    {
-      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\agenda_1.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\Loai\\agenda_1.jpg"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\NhaCC\\Acer_logo-300x300.gif",
