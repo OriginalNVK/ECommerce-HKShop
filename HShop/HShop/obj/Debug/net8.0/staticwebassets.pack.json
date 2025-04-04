@@ -313,6 +313,10 @@
       "PackagePath": "staticwebassets\\Hinh\\Loai\\Buddy.png"
     },
     {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Camera.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\Loai\\Camera.jpg"
+    },
+    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Certificate.png",
       "PackagePath": "staticwebassets\\Hinh\\Loai\\Certificate.png"
     },
@@ -321,8 +325,16 @@
       "PackagePath": "staticwebassets\\Hinh\\Loai\\Dice.png"
     },
     {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\DienThoai.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\Loai\\DienThoai.jpg"
+    },
+    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Dollar.png",
       "PackagePath": "staticwebassets\\Hinh\\Loai\\Dollar.png"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\DongHo.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\Loai\\DongHo.jpg"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Favourites.png",
@@ -335,6 +347,10 @@
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Heart.png",
       "PackagePath": "staticwebassets\\Hinh\\Loai\\Heart.png"
+    },
+    {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Laptop.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\Loai\\Laptop.jpg"
     },
     {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Microsoft.png",

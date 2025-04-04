@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "opYem87BHycpxfOtPPTVRLKKGZ+AdGM1lk9yj5CRZyI=",
+  "Hash": "/gI1EHWNN1mWz5b+iSPFiaELkWTHB/vON/wQL64Y3as=",
   "Source": "HShop",
   "BasePath": "_content/HShop",
   "Mode": "Default",
@@ -5413,6 +5413,25 @@
       "OriginalItemSpec": "wwwroot\\Hinh\\Loai\\Buddy.png"
     },
     {
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Camera.jpg",
+      "SourceId": "HShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
+      "BasePath": "_content/HShop",
+      "RelativePath": "Hinh/Loai/Camera.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\Loai\\Camera.jpg"
+    },
+    {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Certificate.png",
       "SourceId": "HShop",
       "SourceType": "Discovered",
@@ -5451,6 +5470,25 @@
       "OriginalItemSpec": "wwwroot\\Hinh\\Loai\\Dice.png"
     },
     {
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\DienThoai.jpg",
+      "SourceId": "HShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
+      "BasePath": "_content/HShop",
+      "RelativePath": "Hinh/Loai/DienThoai.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\Loai\\DienThoai.jpg"
+    },
+    {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Dollar.png",
       "SourceId": "HShop",
       "SourceType": "Discovered",
@@ -5468,6 +5506,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Hinh\\Loai\\Dollar.png"
+    },
+    {
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\DongHo.jpg",
+      "SourceId": "HShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
+      "BasePath": "_content/HShop",
+      "RelativePath": "Hinh/Loai/DongHo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\Loai\\DongHo.jpg"
     },
     {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Favourites.png",
@@ -5525,6 +5582,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Hinh\\Loai\\Heart.png"
+    },
+    {
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Laptop.jpg",
+      "SourceId": "HShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
+      "BasePath": "_content/HShop",
+      "RelativePath": "Hinh/Loai/Laptop.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\Loai\\Laptop.jpg"
     },
     {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Microsoft.png",
