@@ -47,7 +47,7 @@
                     </div>
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Clients" ? "active" : "")">
                         <a asp-action="Clients" asp-controller="Admin">
-                            <i class="fa fa-users"></i> Quản lý khách hàng
+                            <i class="fa fa-users"></i> Quản lý người dùng
                         </a>
                     </div>
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Categories" ? "active" : "")">
@@ -79,12 +79,20 @@
             <div class="col-lg-10 col-md-9 col-sm-12 admin-content">
                 <div class="content-header">
                     <h2 class="text-uppercase">@ViewBag.Title</h2>
-                    <div class="header-search">
-                        <form class="flex-center" method="get" asp-controller="Admin" asp-action="Search">
-                            <input type="search" class="input form-control p-3" placeholder="Search here" aria-describedby="search-icon-1" name="keyword">
-                            <button type="submit" class="search-btn"><span id="search-icon-1" class="input-group-text p-3">Search</span></button>
-                        </form>
+                    <div class="date-display d-none d-sm-flex flex-column align-items-end mr-3" style="font-size: 16px;">
+                        <!-- Dòng mô tả -->
+                        <small class="text-muted text-uppercase fw-light tracking-wide">Hôm nay là</small>
+
+                        <!-- Phần hiển thị ngày tháng -->
+                        <div class="flex-center">
+                            <!-- Ngày tháng -->
+                            <div class="date-text flex-center gap-2" style="color: #D10024;">
+                                <div class="fw-bold fs-5">@DateTime.Now.ToString("dddd", new System.Globalization.CultureInfo("vi-VN"))</div>
+                                <div class="text-muted" style="color: #D10024;">@DateTime.Now.ToString("dd/MM/yyyy")</div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
                 @RenderBody()

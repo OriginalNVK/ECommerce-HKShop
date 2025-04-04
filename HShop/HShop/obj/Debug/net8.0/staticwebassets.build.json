@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HJ3ajtDIXMzA7OBBgg2apG/dHF9rlALjViQ8bZuYrfE=",
+  "Hash": "g0Cpf0rAPp8vaUw9UdbRXvtZsmNVZxQAt2CumPDoad4=",
   "Source": "HShop",
   "BasePath": "_content/HShop",
   "Mode": "Default",
@@ -5033,12 +5033,12 @@
       "OriginalItemSpec": "wwwroot\\Hinh\\icons\\Zoom.png"
     },
     {
-      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\284845095_700511087909695_1893654197215617806_n.jpg",
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\123.jpg",
       "SourceId": "HShop",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
       "BasePath": "_content/HShop",
-      "RelativePath": "Hinh/KhachHang/284845095_700511087909695_1893654197215617806_n.jpg",
+      "RelativePath": "Hinh/KhachHang/123.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -5049,7 +5049,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\284845095_700511087909695_1893654197215617806_n.jpg"
+      "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\123.jpg"
     },
     {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\436297862_449324097469326_1193953976604596524_n.jpg",
@@ -5071,6 +5071,25 @@
       "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\436297862_449324097469326_1193953976604596524_n.jpg"
     },
     {
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\456.jpg",
+      "SourceId": "HShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
+      "BasePath": "_content/HShop",
+      "RelativePath": "Hinh/KhachHang/456.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\456.jpg"
+    },
+    {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\62df58f8-52e6-4eb0-82d9-1376c7b93591.jpeg",
       "SourceId": "HShop",
       "SourceType": "Discovered",
@@ -5088,25 +5107,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\62df58f8-52e6-4eb0-82d9-1376c7b93591.jpeg"
-    },
-    {
-      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\8b3992cc-29dd-4502-987b-76e909faa4a7.jpeg",
-      "SourceId": "HShop",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
-      "BasePath": "_content/HShop",
-      "RelativePath": "Hinh/KhachHang/8b3992cc-29dd-4502-987b-76e909faa4a7.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Hinh\\KhachHang\\8b3992cc-29dd-4502-987b-76e909faa4a7.jpeg"
     },
     {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\Loai\\Camera.jpg",

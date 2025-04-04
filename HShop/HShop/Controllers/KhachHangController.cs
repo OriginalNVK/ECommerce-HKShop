@@ -98,6 +98,7 @@ namespace HShop.Controllers
                                 new Claim(ClaimTypes.Name, khachHang.HoTen),
                                 new Claim(MyConstant.CLAIM_CUSTOMERID, khachHang.MaKh),
                                 new Claim(ClaimTypes.Role, khachHang.VaiTro.ToString()),
+                                new Claim("Avatar", khachHang.Hinh),
                                 ////claim role - động
                                 //new Claim(ClaimTypes.Role, "Customer")
                             };

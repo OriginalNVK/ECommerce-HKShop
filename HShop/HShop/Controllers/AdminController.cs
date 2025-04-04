@@ -90,7 +90,49 @@ namespace HShop.Controllers
 			return View(HangHoaDTO);
         }
 
-        [Route("/admin/categories")]
+		[Route("/admin/clients")]
+		public async Task<IActionResult> Clients(int pageNumber = 1, int pageSize = 5, int? VaiTro = null)
+		{
+			// Lọc theo VaiTro nếu có
+			var query = db.KhachHangs.AsQueryable();
+
+			if (VaiTro.HasValue)
+			{
+				query = query.Where(c => c.VaiTro == VaiTro.Value);
+			}
+
+			// Phân trang
+			var pagedList = await query
+				.Select(c => new ClientVM
+				{
+                    MaKH = c.MaKh,
+					HoTen = c.HoTen,
+					Hinh = c.Hinh,
+                    GioiTinh = c.GioiTinh,
+                    NgaySinh = c.NgaySinh,
+                    DienThoai = c.DienThoai,
+                    DiaChi = c.DiaChi,
+                    Email = c.Email,
+				})
+				.Skip((pageNumber - 1) * pageSize)
+				.Take(pageSize)
+				.ToListAsync();
+
+			// Lấy danh sách các VaiTro duy nhất
+			var uniqueRoles = await db.KhachHangs
+				.Select(c => c.VaiTro)
+				.Distinct()
+				.ToListAsync();
+
+			ViewBag.Roles = uniqueRoles;
+			ViewBag.PageNumber = pageNumber;
+			ViewBag.PageSize = pageSize;
+			ViewBag.TotalCount = await query.CountAsync();
+
+			return View(pagedList);
+		}
+
+		[Route("/admin/categories")]
         public async Task<IActionResult> Categories()
         {
             var ListCategories = db.Loais.AsQueryable();

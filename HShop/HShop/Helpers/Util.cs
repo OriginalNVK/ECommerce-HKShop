@@ -53,5 +53,18 @@ namespace HShop.Helpers
                     return "Đơn hàng lỗi";
             }
         }
+
+        public static string convertRole(int role)
+        {
+            switch (role)
+            {
+                case 0:
+                    return "Người dùng";
+                case 1:
+                    return "Quản trị viên";
+                default:
+                    return "Lỗi";
+            }
+        }
     }
 }

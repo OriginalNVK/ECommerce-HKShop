@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     padding: 0;
+    transition: all 0.3s ease;
 }
 
 .nav-header {
@@ -27,6 +28,10 @@
     color: #FFF;
     text-align: center;
     flex-shrink: 0; /* Không co lại */
+}
+
+.nav-collapsed {
+    margin-left: -250px;
 }
 
 .nav-menu {
@@ -321,3 +326,26 @@ hr {
     border-color: #00a3e0;
     transition: 0.3s ease-in-out
 }
+
+.tracking-wide {
+    letter-spacing: 0.05em;
+}
+
+.calendar-icon {
+    background: rgba(13, 110, 253, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-text {
+    line-height: 1.2;
+}
+
+.mr-3{
+    margin-right: 50px;
+}
+
