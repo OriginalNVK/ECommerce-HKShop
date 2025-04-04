@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+MzAtneEdTc041/K6CUhN3TdTXXbZPz1bXmqKKcJqg0=",
+  "Hash": "opYem87BHycpxfOtPPTVRLKKGZ+AdGM1lk9yj5CRZyI=",
   "Source": "HShop",
   "BasePath": "_content/HShop",
   "Mode": "Default",
@@ -1573,6 +1573,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Hinh\\HangHoa\\Camera1.jpg"
+    },
+    {
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\HangHoa\\Screenshot 2024-06-03 153510.png",
+      "SourceId": "HShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
+      "BasePath": "_content/HShop",
+      "RelativePath": "Hinh/HangHoa/Screenshot 2024-06-03 153510.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\HangHoa\\Screenshot 2024-06-03 153510.png"
     },
     {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\heropage\\header_headphone_image.png",

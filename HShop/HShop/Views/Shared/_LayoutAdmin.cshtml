@@ -29,7 +29,7 @@
                     <h1 class="text-gradient">HK SHOP</h1>
                 </div>
 
-                <div class="nav-menu">
+                <div class="nav-menu" style="font-size: 16px;">
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Dashboard" ? "active" : "")">
                         <a asp-action="Index" asp-controller="Admin">
                             <i class="fa fa-dashboard"></i> Dashboard
@@ -48,6 +48,16 @@
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Clients" ? "active" : "")">
                         <a asp-action="Clients" asp-controller="Admin">
                             <i class="fa fa-users"></i> Quản lý khách hàng
+                        </a>
+                    </div>
+                    <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Categories" ? "active" : "")">
+                        <a asp-action="Categories" asp-controller="Admin">
+                            <i class="fa fa-tags"></i> Quản lý loại
+                        </a>
+                    </div>
+                    <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Suppliers" ? "active" : "")">
+                        <a asp-action="Suppliers" asp-controller="Admin">
+                            <i class="fa fa-truck"></i> Quản lý nhà cung cấp
                         </a>
                     </div>
                     <div class="nav-item @(ViewContext.RouteData.Values["Action"].ToString() == "Settings" ? "active" : "")">

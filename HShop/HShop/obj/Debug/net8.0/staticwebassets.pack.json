@@ -233,6 +233,10 @@
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Camera1.jpg"
     },
     {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\HangHoa\\Screenshot 2024-06-03 153510.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Screenshot 2024-06-03 153510.png"
+    },
+    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\KhachHang\\284845095_700511087909695_1893654197215617806_n.jpg",
       "PackagePath": "staticwebassets\\Hinh\\KhachHang\\284845095_700511087909695_1893654197215617806_n.jpg"
     },

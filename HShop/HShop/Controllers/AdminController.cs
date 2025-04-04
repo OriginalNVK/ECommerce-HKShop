@@ -89,5 +89,20 @@ namespace HShop.Controllers
 
 			return View(HangHoaDTO);
         }
+
+        [Route("/admin/categories")]
+        public async Task<IActionResult> Categories()
+        {
+            var ListCategories = db.Loais.AsQueryable();
+            var result = await ListCategories.Select(c => new CategoryVM
+            {
+                MaLoai = c.MaLoai,
+                TenLoai = c.TenLoai,
+                TenLoaiAlias = c.TenLoaiAlias,
+                MoTa = c.MoTa,
+                Hinh = c.Hinh,
+            }).ToListAsync();
+            return View(result);
+        }
     }
 }

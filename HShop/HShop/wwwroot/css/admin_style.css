@@ -54,7 +54,7 @@
         }
 
         .nav-menu .nav-item.active {
-            background-color: #FBFBFC;
+            background-color: #fae8e8;
             border-left: 3px solid #D10024;
         }
 
@@ -307,7 +307,7 @@ hr {
     color: #4d5367;
     border-color: #4d5367;
     transition: 0.3s ease-in-out
-}
+}   
 
 .btn-reset{
     background-color: #00b7fa;
