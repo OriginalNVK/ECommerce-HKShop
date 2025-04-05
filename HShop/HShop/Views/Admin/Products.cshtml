@@ -4,30 +4,30 @@
 	ViewBag.Title = "Quản lý hàng hóa";
 }
 <div class="card">
-	<div class="flex-between mb-2">
+	<div class="flex-between mb-2 flex-sm-column">
 		<div>
-			<a asp-action="Create" asp-controller="Products" class="btn btn-success">
+			<a asp-action="Create" asp-controller="Products" class="btn btn-success featured">
 				<i class="fa fa-plus"></i> Thêm hàng hóa
 			</a>
 		</div>
-		<form asp-action="Products" asp-controller="Admin" method="post" class="flex-center gap-2">
-			<div class="col-md-3">
-				<select class="form-select" name="maLoai" style="width: 150px; height: 40px;">
+		<form asp-action="Products" asp-controller="Admin" method="post" class="d-flex flex-md-row flex-grow-1 gap-2">
+			<div class="flex-grow-1">
+				<select class="form-select featured" name="maLoai">
 					<option value="">Tất cả danh mục</option>
-					@foreach (var category in ViewBag.Categories) // Giả sử bạn đã truyền Categories từ controller
+					@foreach (var category in ViewBag.Categories)
 					{
 						<option value="@category.MaLoai">@category.TenLoai</option>
 					}
 				</select>
 			</div>
-			<div class="col-md-3 ms-auto">
+			<div class="flex-grow-1">
 				<div class="input-group">
-					<input type="number" class="form-control" min="5" name="pageSize" placeholder="Kích thước trang" style="width: 160px; height: 40px">
+					<input type="number" class="form-control featured" min="5" name="pageSize" placeholder="Kích thước trang">
 				</div>
 			</div>
-			<div>
-				<button type="submit" class="btn btn-filter" style="width:100px; height: 40px; margin-left: 2px;">Filter</button>
-				<button class="btn btn-reset" onclick="resetFilters()" style="width:100px; height: 40px">
+			<div class="d-flex gap-2">
+				<button type="submit" class="btn btn-filter featured">Filter</button>
+				<button type="button" class="btn btn-reset featured" onclick="resetFilters()">
 					<i class="fa fa-refresh"></i> Reset
 				</button>
 			</div>

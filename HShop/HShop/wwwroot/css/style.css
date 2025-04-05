@@ -2176,6 +2176,21 @@ textarea.input {
         text-align: center;
     }
 
+        .header-search form {
+            display: flex;
+        }
+    
+        .header-search form .input {
+            order: 1;
+            /* Ô input ở giữa */
+            width: 100%;
+        }
+    
+        .header-search form .search-btn {
+            order: 2;
+            /* Nút search cuối cùng */
+        }
+
 
 
         .header-logo .logo {
@@ -2318,6 +2333,18 @@ textarea.input {
 
     .product .add-to-cart .add-to-cart-btn:hover{
         padding: 0px 4px 0px 4px;
+    }
+
+    .header-search form .input {
+        order: 1;
+        /* Ô input ở giữa */
+        width: 80%;
+    }
+    
+    .header-search form .search-btn {
+        order: 2;
+        /* Nút search cuối cùng */
+        width: 40%;
     }
 }
 

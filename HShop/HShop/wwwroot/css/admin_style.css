@@ -25,7 +25,6 @@
 .nav-header {
     padding: 20px;
     background-color: #15161D;
-    color: #FFF;
     text-align: center;
     flex-shrink: 0; /* Không co lại */
 }
@@ -127,8 +126,19 @@
         font-weight: 700;
     }
 
+    .menu-toggle-admin{
+        display: none;
+    }
+
+    .featured {
+    transition: all 0.3s ease;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
 /* Responsive */
-@media (max-width: 991.98px) {
+@media only screen and (max-width: 991px) {
     .admin-nav {
         height: auto;
         position: relative;
@@ -140,6 +150,86 @@
 
     .admin-content {
         height: auto;
+    }
+
+    .hidden-sm{
+        display: none !important;
+    }
+
+    .nav-header .menu-toggle-admin {
+        position: relative;
+        left: -300px;
+        top: 0;
+        display: inline-block;
+    }   
+
+    .nav-header .menu-toggle-admin i {
+        font-size: 26px;
+        color: #D10024;
+        cursor: pointer;
+    }
+
+    .featured {
+        font-size: 13px;
+        padding: 7px 11px;
+    }
+    
+    .featured.btn {
+        height: 38px !important;
+    }
+    
+    .featured.form-select, 
+    .featured.form-control {
+        height: 38px !important;
+        min-width: 120px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .nav-header .menu-toggle-admin {
+        left: -250px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-header .menu-toggle-admin{
+        left: -150px;
+    }
+
+    .featured{
+        width: 80%;
+        height: 90%;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .nav-header .menu-toggle-admin {
+        left: -100px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .featured {
+        width: 100% !important; /* Ghi đè width inline nếu có */
+        margin-bottom: 8px;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .featured.btn {
+        height: 36px !important;
+    }
+    
+    .featured.form-select, 
+    .featured.form-control {
+        height: 36px !important;
+        width: 100% !important;
+    }
+
+    .flex-sm-column{
+        flex-direction: column !important;
     }
 }
 
@@ -228,7 +318,7 @@
     font-weight: 1000;
 }
 
-m-4{
+.m-4{
     margin: 20px;
 }
 
