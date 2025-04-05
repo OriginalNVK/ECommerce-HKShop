@@ -16,6 +16,6 @@
 
         public string Email { get; set; } = null!;
 
-        public string? Hinh { get; set; }
+        public string? Hinh { get; set; } = null;
     }
 }
