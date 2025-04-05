@@ -16,6 +16,12 @@ namespace HShop.Controllers
 		}
 
 		[HttpGet]
+		public async Task<IActionResult> CreateUser()
+		{
+			return View();
+		}
+
+		[HttpGet]
 		[Route("/admin/client/update/{id}")]
         public async Task<IActionResult> Update(string? id)
 		{
@@ -38,14 +44,14 @@ namespace HShop.Controllers
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Edit([Bind("MaKH, HoTen, GioiTinh, NgaySinh, DiaChi, DienThoai, Email")] ClientVM Client,
-			IFormFile Hinh)
+			IFormFile? Hinh)
 		{
 			if (ModelState.IsValid)
 			{
 				// Xử lý lưu ảnh
 				if (Hinh != null && Hinh.Length > 0)
 				{
-					Client.Hinh = MyUtil.UpLoadHinh(Hinh, "HangHoa");
+					Client.Hinh = MyUtil.UpLoadHinh(Hinh, "KhachHang");
 				}
 
 				var ExistsClient = await db.KhachHangs.FirstOrDefaultAsync(c => c.MaKh == Client.MaKH);
@@ -68,6 +74,27 @@ namespace HShop.Controllers
 				return NotFound();
 			}
 			return Redirect("/admin/clients/update/" + Client.MaKH);
+		}
+
+		public async Task<IActionResult> Delete(string id)
+		{
+			var HoaDons = await db.HoaDons.Where(h => h.MaKh == id).ToListAsync();	
+			foreach(var h in HoaDons)
+			{
+				var Cthhs = await db.ChiTietHds.Where(h => h.MaHd == h.MaHd).ToListAsync();
+				db.ChiTietHds.RemoveRange(Cthhs);
+				db.Remove(h);
+				await db.SaveChangesAsync();
+			}
+			var Client = await db.KhachHangs.SingleOrDefaultAsync(k => k.MaKh == id);
+			if (Client != null)
+			{
+				db.KhachHangs.Remove(Client);
+				await db.SaveChangesAsync();
+				return Redirect("admin/clients");
+			}
+			return Redirect("/blank");
+			
 		}
 	}
 }

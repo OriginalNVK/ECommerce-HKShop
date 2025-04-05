@@ -62,7 +62,7 @@
 							<td class="text-center">@(j++)</td>
 							<td class="text-center"><img src="~/Hinh/KhachHang/@item.Hinh" alt="@item.HoTen" width="100" height="110"></td>
 							<td class="text-center">@item.HoTen</td>
-							<td class="text-center">@item.GioiTinh</td>
+							<td class="text-center">@(item.GioiTinh? "Nam" : "Nữ")</td>
 							<td class="text-center">@item.DienThoai</td>
 							<td class="text-center">@item.DiaChi</td>
 							<td class="text-center">@item.Email</td>
@@ -123,7 +123,7 @@
 				var deleteUrl = $(this).attr('href'); // Lấy URL từ thẻ a
 
 				// Hiển thị hộp thoại confirm
-				if (confirm('Bạn có chắc chắn muốn xóa đơn hàng này?')) {
+				if (confirm('Bạn có chắc chắn muốn xóa người dùng này?')) {
 					window.location.href = deleteUrl; // Chuyển hướng nếu đồng ý
 				}
 			});

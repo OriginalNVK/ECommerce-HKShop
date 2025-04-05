@@ -203,13 +203,19 @@ namespace HShop.Controllers
 
 		public async Task<IActionResult> Delete(int id)
 		{
-			var hangHoa = await db.HangHoas.FindAsync(id);
-			if (hangHoa != null)
+			var cthhs = await db.ChiTietHds.FirstOrDefaultAsync(c => c.MaHh == id);
+			if(cthhs == null)
 			{
-				db.HangHoas.Remove(hangHoa);
-			}
+				var hangHoa = await db.HangHoas.FindAsync(id);
+				if (hangHoa != null)
+				{
+					db.HangHoas.Remove(hangHoa);
+				}
 
-			await db.SaveChangesAsync();
+				await db.SaveChangesAsync();
+				return Redirect("/admin/products");
+			}
+			TempData["ErrorMessage"] = "Không thể xóa hàng hóa vì đang được sử dụng trong hóa đơn!";
 			return Redirect("/admin/products");
 		}
 
