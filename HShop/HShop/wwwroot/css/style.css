@@ -453,10 +453,6 @@ textarea.input {
     float: left;
 }
 
-    .header-logo .logo img {
-        display: block;
-    }
-
 /*----------------------------*\
 	Search
 \*----------------------------*/
@@ -662,7 +658,7 @@ textarea.input {
     }
 
 .header-ctn li.nav-toggle {
-    display: none;
+    display: block;
 }
 
 /*----------------------------*\
@@ -683,7 +679,7 @@ textarea.input {
         max-width: 250px;
         width: 0%;
         overflow: hidden;
-        z-index: 22;
+        z-index: 2000;
         padding-top: 60px;
         -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
@@ -717,6 +713,16 @@ textarea.input {
                 padding: 15px;
                 color: #FFF;
             }
+
+                .header-search form .input {
+                    width: calc(100% - 200px);
+                    /* Giảm bớt khoảng trống */
+                }
+        
+                .header-search form .search-btn {
+                    width: 80px;
+                    /* Nút nhỏ hơn */
+                }
 }
 
 /*=========================================================
@@ -1064,7 +1070,7 @@ textarea.input {
         .product .add-to-cart .add-to-cart-btn > i {
             position: absolute;
             left: 0;
-            top: 0;
+            top: -4px;
             width: 40px;
             height: 40px;
             line-height: 20px;
@@ -2146,10 +2152,16 @@ textarea.input {
 	13 -> RESPONSIVE
 ===========================================================*/
 
-@media only screen and (max-width: 1201px) {
+@media only screen and (max-width: 1201px) and (min-width: 992px) {
+    .product .add-to-cart .add-to-cart-btn{
+        font-size: 11px;
+    }
+    .product .add-to-cart .add-to-cart-btn:hover{
+        padding: 0px 10px 0px 22px;
+    }
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) and (min-width: 768px) {
     #top-header .header-links.pull-left {
         float: none !important;
     }
@@ -2163,6 +2175,8 @@ textarea.input {
         float: none;
         text-align: center;
     }
+
+
 
         .header-logo .logo {
             display: inline-block;
@@ -2181,9 +2195,13 @@ textarea.input {
         margin-top: 30px;
         margin-bottom: 30px;
     }
+
+    .add-to-cart-btn{
+        font-size: 10px;
+    }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) and (min-width: 480px) {
     .section-title .section-nav {
         float: none;
         margin-top: 10px;
@@ -2191,6 +2209,115 @@ textarea.input {
 
     .section-tab-nav li {
         margin-top: 10px;
+    }
+
+    .header-search form {
+        display: flex;
+    }
+    
+    .header-search form .input {
+        order: 1; /* Ô input ở giữa */
+        width: 100%;
+    }
+    
+    .header-search form .search-btn {
+        order: 2; /* Nút search cuối cùng */
+    }
+
+       .header-ctn > div {
+        margin-left: 8px !important; /* Giảm khoảng cách giữa các item */
+    }
+    
+    .header-ctn > div > a {
+        width: auto; /* Cho phép co lại tự động */
+        padding: 5px;
+    }
+    
+    .header-ctn > div > a > i {
+        font-size: 12px; /* Giảm 50% từ 18px */
+    }
+    
+    .header-ctn > div > a > span {
+        font-size: 8px; /* Giảm 50% từ 12px */
+        margin-top: 2px;
+    }
+    
+    .header-ctn > div > a > .qty {
+        width: 10px;
+        height: 10px;
+        line-height: 10px;
+        font-size: 6px;
+        right: 5px;
+        top: -5px;
+    }
+    
+    /* Điều chỉnh dropdown cart */
+    .cart-dropdown {
+        width: 250px;
+        right: -50px;
+    }
+    
+    .cart-dropdown .cart-list {
+        max-height: 120px;
+    }
+    
+    .cart-dropdown .cart-btns > a {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    h3.collection{
+        font-size: 16px;
+    }
+
+    .cta-btn{
+        font-size: 9px;
+    }
+
+    h3.m-0{
+        font-size: 16px;
+    }
+
+    .product .product-body .product-category {
+        font-size: 8px;
+    }
+
+    .product .product-body .product-name{
+        font-size: 10px;
+    }
+
+    .product .product-body .product-price{
+        font-size: 12px;
+    }
+
+    .product-btns i{
+        font-size: 10px;
+    }
+
+    .add-to-cart-btn{
+        font-size: 10px;
+    }
+
+    .product .add-to-cart .add-to-cart-btn{
+        padding: 0px 5px 0px 5px;
+    }
+
+    .product .add-to-cart .add-to-cart-btn:hover{
+        padding: 0px 7px 0px 10px;
+    }
+}
+
+@media only screen and (max-width: 576px) and (min-width: 480px){
+    .add-to-cart-btn{
+        font-size: 6px;
+    }
+
+    .product .add-to-cart .add-to-cart-btn{
+        padding: 0px 2px 0px 2px;
+    }
+
+    .product .add-to-cart .add-to-cart-btn:hover{
+        padding: 0px 4px 0px 4px;
     }
 }
 
@@ -2207,6 +2334,14 @@ textarea.input {
     .store-pagination {
         float: none;
         margin-top: 10px;
+    }
+
+     .header-search {
+        padding: 10px 0;
+    }
+    
+    .header-search form .search-btn {
+        height: 36px; /* Chiều cao nhỏ hơn */
     }
 }
 
@@ -2239,7 +2374,7 @@ img.w-small{
 }
 
 .mx-1{
-    margin-left: 45px;
+    margin: 0px 45px;
 }
 
 .mx-3 {
@@ -2404,3 +2539,42 @@ img.w-small{
     .h-80{
         height: 500px;
     }
+
+    .d-none{
+        display: none;
+    }
+
+        @media (max-width: 991.98px) {
+    
+            /* Kích thước md và nhỏ hơn */
+            .d-md-none {
+                display: none !important;
+            }
+
+            .d-md-flex{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .mx-1{
+                margin: 0px 15px;
+            }
+
+            .h-80{
+                height: 400px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) and (min-width: 576px) {
+    
+            .h-80 {
+                    height: 350px;
+                }
+        }
+
+        @media only screen and (max-width: 576px) and (min-width: 480px) {
+    
+            .h-80 {
+                    height: 300px;
+                }
+        }

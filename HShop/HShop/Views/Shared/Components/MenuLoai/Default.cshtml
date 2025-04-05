@@ -1,12 +1,12 @@
 ﻿@model IEnumerable<HShop.ViewModels.MenuLoaiVM>;
 <form class="flex-center" method="get" asp-controller="HangHoa" asp-action="Index">
-    <select class="input-select" name="MaLoai">
+    <select class="input-select d-md-none" name="MaLoai">
         <option value="0">Danh mục</option>
         @foreach(var item in Model)
         {
             <option value="@item.MaLoai">@item.TenLoai</option>
         }
     </select>
-    <input type="search" class="input form-control p-3" placeholder="Search here" aria-describedby="search-icon-1" name="keyword">
+    <input type="search" class="input form-control p-3" placeholder="Từ khóa tìm kiếm" aria-describedby="search-icon-1" name="keyword">
     <button type="submit" class="search-btn"><span id="search-icon-1" class="input-group-text p-3">Search</span></button>
 </form>

@@ -46,7 +46,7 @@
 			<!-- TOP HEADER -->
 			<div id="top-header">
 				<div class="container">
-					<ul class="header-links pull-left md-hidden">
+					<ul class="header-links pull-left md-hidden d-md-none">
 						<li><a href="#" class=""><i class="fa fa-phone"></i> +8485-898-1798</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> nvk.work@outlook.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i> KTX khu B. DHQG</a></li>
@@ -84,7 +84,7 @@
 				<!-- container -->
 				<div class="container">
 					<!-- row -->
-					<div class="row">
+					<div class="row d-md-flex">
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
@@ -95,7 +95,7 @@
 						</div>
 						<!-- /LOGO -->
 						<!-- SEARCH BAR -->
-						<div class="col-md-6">
+						<div class="col-md-6 d-md-none">
 							<div class="header-search">
 								@await Component.InvokeAsync("MenuLoai")
 							</div>
@@ -105,20 +105,21 @@
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
 								<!-- Wishlist -->
-								<div>
+								<div class="wishlist-icon">
 									<a href="/blank">
 										<i class="fa fa-heart-o"></i>
-										<span>Mục ưu thích</span>
+										<span class="text-label">Mục ưu thích</span>
 										<div class="qty">2</div>
 									</a>
 								</div>
 								<!-- /Wishlist -->
 								@await Component.InvokeAsync("CartPanel")
+
 								<!-- Menu Toogle -->
 								<div class="menu-toggle">
 									<a href="#">
 										<i class="fa fa-bars"></i>
-										<span>Menu</span>
+										<span class="text-label">Menu</span>
 									</a>
 								</div>
 								<!-- /Menu Toogle -->
