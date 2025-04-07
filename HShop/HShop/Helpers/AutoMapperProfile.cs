@@ -9,6 +9,7 @@ namespace HShop.Helpers
         public AutoMapperProfile() {
             CreateMap<RegisterVM, KhachHang>();
             CreateMap<ClientVM, KhachHang>();
+            CreateMap<Loai, CategoryVM>();
                 //.ForMember(kh => kh.HoTen, option => option.MapFrom(RegisterVM => RegisterVM.HoTen))
                 //.ReverseMap();
         }
