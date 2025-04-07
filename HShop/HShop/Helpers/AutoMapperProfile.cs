@@ -8,6 +8,7 @@ namespace HShop.Helpers
     {
         public AutoMapperProfile() {
             CreateMap<RegisterVM, KhachHang>();
+            CreateMap<ClientVM, KhachHang>();
                 //.ForMember(kh => kh.HoTen, option => option.MapFrom(RegisterVM => RegisterVM.HoTen))
                 //.ReverseMap();
         }

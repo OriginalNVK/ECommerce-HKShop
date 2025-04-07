@@ -7,7 +7,7 @@
 <div class="card">
 	<div class="flex-between mb-2 flex-sm-column">
 		<div>
-			<a asp-action="Create" asp-controller="Products" class="btn btn-success featured">
+			<a asp-action="Create" asp-controller="Clients" class="btn btn-success featured">
 				<i class="fa fa-plus"></i> Thêm người dùng
 			</a>
 		</div>
@@ -60,7 +60,29 @@
 					{
 						<tr>
 							<td class="text-center">@(j++)</td>
-							<td class="text-center"><img src="~/Hinh/KhachHang/@item.Hinh" alt="@item.HoTen" width="100" height="110"></td>
+							<td class="text-center">
+								@if (!String.IsNullOrEmpty(item.Hinh))
+								{
+									<img src="~/Hinh/KhachHang/@item.Hinh"
+										 alt="@item.HoTen"
+										 style="width: 150px; height: 150px; object-fit: cover;"
+										 class="img-thumbnail">
+								}
+								else
+								{
+									<div class="mt-2">
+										<div style="width: 150px; height: 150px;
+                        border: 1px solid #ddd;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #f8f9fa;"
+											 class="img-thumbnail">
+											<span style="color: #666; font-size: 14px;">No Image</span>
+										</div>
+									</div>
+								}
+							</td>
 							<td class="text-center">@item.HoTen</td>
 							<td class="text-center">@(item.GioiTinh? "Nam" : "Nữ")</td>
 							<td class="text-center">@item.DienThoai</td>

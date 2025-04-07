@@ -1,10 +1,14 @@
-﻿namespace HShop.ViewModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HShop.ViewModels
 {
     public class ClientVM
     {
         public string MaKH {  get; set; }
 
-        public string HoTen { get; set; } = null!;
+		public string? MatKhau { get; set; }
+
+		public string HoTen { get; set; } = null!;
 
         public bool GioiTinh { get; set; }
 
@@ -16,6 +20,8 @@
 
         public string Email { get; set; } = null!;
 
-        public string? Hinh { get; set; }
+		public int VaiTro { get; set; }
+
+		public string? Hinh { get; set; }
     }
 }

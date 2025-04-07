@@ -1,0 +1,23 @@
+﻿@{
+    var toastColor = TempData["ToastType"]?.ToString() == "error" ? "#dc3545" : "#28a745";
+}
+
+@if (TempData["ToastMessage"] != null)
+{
+    <div id="messageBox" class="alert position-absolute m-3 p-3 rounded shadow"
+         style="background-color: @toastColor;">
+        <strong>Thông báo: </strong> @TempData["ToastMessage"]
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var messageBox = document.getElementById('messageBox');
+            if (messageBox) {
+                setTimeout(function () {
+                    messageBox.style.display = "none"; // Ẩn thẻ sau 3 giây
+                    fetch('/Home/ResetToastMessage', { method: 'POST' }); // Gửi request reset TempData
+                }, 3000);
+            }
+        });
+    </script>
+}

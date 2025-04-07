@@ -8,6 +8,12 @@ namespace HShop.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        [HttpPost]
+        public IActionResult ResetToastMessage()
+        {
+            TempData["ToastMessage"] = null;
+            return Ok();
+        }
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;

@@ -7216,9 +7216,13 @@ img.w-small{
 }
 
 
-/*.position-fixed {
+.position-fixed {
     position: fixed !important;
-}*/
+}
+
+.position-absolute{
+    position: absolute !important;
+}
 
 .fixed-top {
     position: fixed !important;

@@ -84,7 +84,7 @@
             <div class="col-lg-10 col-md-9 col-sm-12 admin-content">
                 <div class="content-header">
                     <h2 class="text-uppercase">@ViewBag.Title</h2>
-                    <div class="date-display d-none d-sm-flex flex-column align-items-end mr-3" style="font-size: 16px;">
+                    <div class="date-display d-sm-flex flex-column align-items-end mr-3" style="font-size: 16px; position: relative;">
                         <!-- Dòng mô tả -->
                         <small class="text-muted text-uppercase fw-light tracking-wide">Hôm nay là</small>
 
@@ -98,6 +98,7 @@
                         </div>
                     </div>
 
+                    @await Html.PartialAsync("_ToastNotification")
                 </div>
 
                 @RenderBody()
