@@ -3,6 +3,7 @@ using HShop.Data;
 using HShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace HShop.Controllers
 {
@@ -30,5 +31,18 @@ namespace HShop.Controllers
 
             return View(categoryDTO);
         }
-    }
+
+        [HttpPost]
+		[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit([Bind("MaLoai, TenLoai, TenLoaiAlias, MoTa")] CategoryVM category, IFormFile? image)
+        {
+            if (ModelState.IsValid)
+            {
+                var CTHDS = await db.ChiTietHds.FirstOrDefaultAsync(c => )
+                var categoryExists = await db.Loais.FirstOrDefaultAsync(c => c.MaLoai ==  category.MaLoai);
+                
+            }
+
+		}
+	}
 }
