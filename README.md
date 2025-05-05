@@ -17,69 +17,76 @@
 1. [Introduction](#introduction) 🌟  
 2. [Technologies](#technologies) 🛠️  
 3. [Features](#features) 🔎  
-4. [Development](#development) 🚀  
+4. [Getting Started](#getting-started) 🚀  
 5. [Contact](#contact) 📫  
 
 ---
 
-## 🌟 <a name="introduction">Introduction</a>
+## 🌟 Introduction
 
-**HK Technology Shop** là một ứng dụng web cá nhân được phát triển để phục vụ nhu cầu mua sắm các sản phẩm công nghệ. Ứng dụng được xây dựng bằng ngôn ngữ lập trình C# với kiến trúc MVC, hỗ trợ đầy đủ các chức năng cho cả người dùng và quản trị viên.
-
----
-
-## 🛠️ <a name="technologies">Technologies</a>
-
-- **C# (ASP.NET MVC):** Xây dựng backend và xử lý nghiệp vụ.
-- **Bootstrap & HTML:** Thiết kế giao diện người dùng hiện đại và responsive.
-- **SQL Server:** Lưu trữ dữ liệu như sản phẩm, khách hàng, đơn hàng,...
+**HK Technology Shop** is a personal web application developed to support the shopping experience for technology-related products. Built with C# using the ASP.NET MVC architecture, the application offers full functionality for both customers and administrators.
 
 ---
 
-## 🔎 <a name="features">Features</a>
+## 🛠️ Technologies
 
-### 🎯 **Client Flow**
-- Xem danh sách sản phẩm công nghệ
-- Thêm sản phẩm vào giỏ hàng
-- Đặt hàng
-- Giao hàng
-- Thanh toán hóa đơn
+- **C# (ASP.NET MVC):** Backend logic and MVC architecture.
+- **Bootstrap & HTML:** Modern, responsive frontend interface.
+- **SQL Server:** Database management for products, customers, orders, and more.
+
+---
+
+## 🔎 Features
+
+### 🎯 **Customer Flow**
+- Browse tech product catalog
+- Add products to cart
+- Place orders
+- Track shipping
+- Pay invoices
 
 ### 🛠️ **Admin Flow**
-- Quản lý sản phẩm
-- Quản lý khách hàng
-- Quản lý đơn đặt hàng
-- Quản lý loại sản phẩm
-- Quản lý nhà cung cấp
+- Manage products
+- Manage customers
+- Manage orders
+- Manage categories
+- Manage suppliers
 
 ---
 
-## 🚀 <a name="development">Development</a>
+## 🚀 Getting Started
 
-### Prerequisites
-- Visual Studio (2022 hoặc mới hơn)
-- SQL Server
+### ✅ Prerequisites
 
-### Setup
-1. **Clone repository**
-```bash
-git clone https://github.com/OriginalNVK/ECommerce-HKShop.git
-cd HKShop
-### 🗄️ Chạy script tạo CSDL
+Make sure you have the following installed:
 
-1. Mở **SQL Server Management Studio**
-2. Chạy file `hk_technology_shop.sql` trong thư mục `Database/`
+- **Visual Studio 2022** (or later)
+- **SQL Server Management Studio**
+- **.NET Framework** (suitable for ASP.NET MVC projects)
 
-### 🚀 Chạy ứng dụng
+### 📂 Installation & Setup
 
-1. Mở project bằng **Visual Studio**
-2. Nhấn `F5` hoặc `Ctrl + F5` để chạy
-3. Truy cập trình duyệt tại: [https://localhost:7272/](https://localhost:7272/)
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/OriginalNVK/ECommerce-HKShop.git
+   cd ECommerce-HKShop
+   ```
+
+2. **Configure the Database**
+   - Open SQL Server Management Studio
+   - Execute the SQL script located at: `HKShop/HShopDB.sql`
+   - This will create and initialize the database.
+
+3. **Run the Application**
+   - Open the solution file in Visual Studio
+   - Press `F5` or `Ctrl + F5` to build and launch the project
+   - Navigate to: `https://localhost:7272/`
 
 ---
 
 ## 📫 Contact
 
-**Nguyen Van Khanh**  
-- 🔗 GitHub: [OriginalNVK](https://github.com/OriginalNVK)  
-- 📧 Email: khanh25051999@gmail.com
+**Nguyen Van Khanh**
+
+🔗 GitHub: [OriginalNVK](https://github.com/OriginalNVK)  
+📧 Email: khanh25051999@gmail.com
