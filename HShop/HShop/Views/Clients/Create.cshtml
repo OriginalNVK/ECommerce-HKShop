@@ -11,29 +11,28 @@
 		</div>
 		<div class="card-body mt-4">
 			<form asp-action="CreateUser" asp-controller="Clients" class="form-horizontal" method="post" enctype="multipart/form-data">
-				@* <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div> *@
-				<!-- Cột thông tin chính -->
-				<div class="d-flex">
-					<div class="col-md-5">
-						<div class="form-group">
-							<label class="col-sm-4 col-form-label">Username: </label>
+				<div class="form-row">
+					<!-- Cột bên trái -->
+					<div class="col-md-6 col-sm-12">
+						<div class="form-group form-row">
+							<label class="col-sm-4 col-form-label">Username:</label>
 							<div class="col-sm-8">
 								<input asp-for="MaKH" class="form-control" />
 								<span asp-validation-for="MaKH" class="text-danger small"></span>
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label class="col-sm-4 col-form-label">Họ và tên</label>
+						<div class="form-group form-row">
+							<label class="col-sm-4 col-form-label">Họ và tên:</label>
 							<div class="col-sm-8">
 								<input asp-for="HoTen" class="form-control" />
 								<span asp-validation-for="HoTen" class="text-danger small"></span>
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label class="col-sm-4 col-form-label">Giới tính: </label>
-							<div class="col-sm-8">
+						<div class="form-group form-row">
+							<label class="col-sm-4 col-form-label">Giới tính:</label>
+							<div class="col-sm-8 d-flex align-items-center">
 								<div class="form-check form-check-inline">
 									<input class="form-check-input" type="radio" asp-for="GioiTinh" value="true" id="gioiTinhNam">
 									<label class="form-check-label" for="gioiTinhNam">Nam</label>
@@ -42,12 +41,14 @@
 									<input class="form-check-input" type="radio" asp-for="GioiTinh" value="false" id="gioiTinhNu">
 									<label class="form-check-label" for="gioiTinhNu">Nữ</label>
 								</div>
+							</div>
+							<div class="offset-sm-4 col-sm-8">
 								<span asp-validation-for="GioiTinh" class="text-danger small"></span>
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label class="col-sm-4 col-form-label">Số điện thoại: </label>
+						<div class="form-group form-row">
+							<label class="col-sm-4 col-form-label">Số điện thoại:</label>
 							<div class="col-sm-8">
 								<input asp-for="DienThoai" class="form-control" />
 								<span asp-validation-for="DienThoai" class="text-danger small"></span>
@@ -55,35 +56,36 @@
 						</div>
 					</div>
 
-					<div class="col-md-5">
-						<div class="form-group">
-							<label class="col-sm-4 col-form-label">Mật khẩu: </label>
+					<!-- Cột bên phải -->
+					<div class="col-md-6 col-sm-12">
+						<div class="form-group form-row">
+							<label class="col-sm-4 col-form-label">Mật khẩu:</label>
 							<div class="col-sm-8">
 								<input asp-for="MatKhau" class="form-control" type="date" />
 								<span asp-validation-for="MatKhau" class="text-danger small"></span>
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label class="col-sm-4 col-form-label">Địa chỉ: </label>
+						<div class="form-group form-row">
+							<label class="col-sm-4 col-form-label">Địa chỉ:</label>
 							<div class="col-sm-8">
-								<input asp-for="DiaChi" class="form-control" type="text" placeholder="KTX khu B, DHQG" />
+								<input asp-for="DiaChi" class="form-control" placeholder="KTX khu B, DHQG" />
 								<span asp-validation-for="DiaChi" class="text-danger small"></span>
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label class="col-sm-4 col-form-label">Email: </label>
+						<div class="form-group form-row">
+							<label class="col-sm-4 col-form-label">Email:</label>
 							<div class="col-sm-8">
 								<input asp-for="Email" class="form-control" type="email" placeholder="abc@gmail.com" />
 								<span asp-validation-for="Email" class="text-danger small"></span>
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label class="col-sm-4 col-form-label">Vai trò: </label>
+						<div class="form-group form-row">
+							<label class="col-sm-4 col-form-label">Vai trò:</label>
 							<div class="col-sm-8">
-								<select asp-for="VaiTro">
+								<select asp-for="VaiTro" class="form-control">
 									<option value="0">Người dùng</option>
 									<option value="1">Quản trị viên</option>
 								</select>
@@ -91,11 +93,12 @@
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label class="col-sm-4 col-form-label">Ảnh minh họa</label>
+						<div class="form-group form-row">
+							<label class="col-sm-4 col-form-label">Ảnh minh họa:</label>
 							<div class="col-sm-8">
 								<div class="custom-file">
 									<input name="image" class="custom-file-input" id="customFile" type="file">
+									<label class="custom-file-label" for="customFile">Chọn ảnh</label>
 								</div>
 								<div class="mt-2">
 									<div style="width: 150px; height: 150px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;" class="img-thumbnail">
@@ -109,7 +112,7 @@
 
 				<!-- Nút hành động -->
 				<div class="form-group text-center mt-4">
-					<button type="submit" class="btn btn-success justify-content-center text-center px-4">
+					<button type="submit" class="btn btn-success px-4">
 						Thêm người dùng
 					</button>
 					<a asp-action="Clients" asp-controller="Admin" class="btn btn-filter ml-2" style="height: 40px">

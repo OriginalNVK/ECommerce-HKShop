@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "234jhQR9+mFCamr+egX4miW7OBVeITdvHoE5nL1C9+k=",
+  "Hash": "Fya04xpvCPcYkmBEBpbdaQ3+qduc+vDTAdJTOW5Txus=",
   "Source": "HShop",
   "BasePath": "_content/HShop",
   "Mode": "Default",
@@ -1535,6 +1535,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Hinh\\HangHoa\\51Z9tfgl4aL._SL500_AA300_.jpg"
+    },
+    {
+      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\HangHoa\\6556221696517.mp4",
+      "SourceId": "HShop",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
+      "BasePath": "_content/HShop",
+      "RelativePath": "Hinh/HangHoa/6556221696517.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Hinh\\HangHoa\\6556221696517.mp4"
     },
     {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\HangHoa\\8b3992cc-29dd-4502-987b-76e909faa4a7.jpeg",
@@ -7425,25 +7444,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\product.html"
-    },
-    {
-      "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\README.md",
-      "SourceId": "HShop",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\",
-      "BasePath": "_content/HShop",
-      "RelativePath": "README.md",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\README.md"
     },
     {
       "Identity": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\scss\\bootstrap.scss",

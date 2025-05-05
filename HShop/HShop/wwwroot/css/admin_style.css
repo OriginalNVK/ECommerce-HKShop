@@ -233,6 +233,87 @@
     }
 }
 
+@media (max-width: 991.98px) {
+    .card-body .row {
+        flex-direction: column !important;
+    }
+
+    .card-body .col-md-5,
+    .card-body .col-md-10 {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .card-body .ml-2 {
+        margin-left: 0 !important;
+    }
+
+    .card-body .mb-4 {
+        margin-bottom: 1rem !important;
+    }
+
+    .card-body .mt-2 {
+        margin-top: 1rem !important;
+    }
+
+    .card-body .form-group label {
+        font-size: 1rem;
+    }
+
+    .card-body img.img-thumbnail {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-header h2 {
+        font-size: 1.1rem !important;
+    }
+
+    .card-body .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .card-body .input-group-text,
+    .card-body .input-group-append {
+        font-size: 0.9rem;
+    }
+
+    .card-body .btn {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .card-body .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .card-body .img-thumbnail,
+    .card-body .img-thumbnail div {
+        max-width: 120px !important;
+        height: 120px !important;
+        font-size: 12px;
+    }
+
+    .card-body textarea.form-control {
+        min-height: 80px;
+        font-size: 0.95rem;
+    }
+
+    .card-body .custom-file-label {
+        font-size: 0.95rem;
+    }
+
+    .card-body .input-group {
+        flex-direction: column;
+    }
+
+    .card-body .input-group-append {
+        margin-top: 4px;
+    }
+}
+
 #hoaDonTable {
     font-size: 14px;
 }
@@ -455,4 +536,139 @@ hr {
 
 .text-danger {
     color: #dc3545 !important;
+}
+
+.ml-4{
+    margin-left: 20px;
+}
+
+.ml-8{
+    margin-left: 40px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.form-row>[class^="col-"],
+.form-row>[class*=" col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Mobile First: Mặc định là mobile */
+
+@media (max-width: 576px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row .col-form-label {
+        margin-bottom: 0.25rem;
+        text-align: left !important;
+    }
+
+    .form-row>div[class*='col-'] {
+        width: 100%;
+        text-align: left !important;
+        margin-bottom: 1rem;
+    }
+
+    .input-group-append {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .img-thumbnail {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .form-group.text-center.mt-4 {
+        text-align: center;
+    }
+
+    .form-group.text-center.mt-4 button,
+    .form-group.text-center.mt-4 a {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .custom-file-label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* Tablet: nhỏ hơn 768px */
+@media (min-width: 577px) and (max-width: 767px) {
+
+    .form-row .col-md-4,
+    .form-row .col-md-8 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .text-end,
+    .text-md-right {
+        text-align: left !important;
+    }
+}
+
+/* Desktop nhỏ hơn 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+         .form-row>.col-12.col-md-4,
+         .form-row>.col-12.col-md-8 {
+             flex: 0 0 50%;
+             max-width: 50%;
+             padding-left: 8px;
+             padding-right: 8px;
+         }
+    
+         .form-row label {
+             text-align: left !important;
+             font-size: 0.95rem;
+         }
+    
+         .form-row .form-control,
+         .form-row .custom-file {
+             font-size: 0.95rem;
+         }
+    
+         /* Giữ nguyên hai cột (mỗi cột chiếm 50%) */
+         .form-row {
+             display: flex;
+             flex-wrap: wrap;
+             margin-left: -8px;
+             margin-right: -8px;
+         }
+    
+         .col-md-6 {
+             flex: 0 0 50%;
+             max-width: 50%;
+         }
+    
+         .form-group.form-row {
+             margin-bottom: 1rem;
+         }
+    
+         /* Responsive ảnh minh họa */
+         .img-thumbnail {
+             max-width: 100%;
+             height: auto;
+         }
 }
