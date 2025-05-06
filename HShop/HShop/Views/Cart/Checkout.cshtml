@@ -120,16 +120,6 @@
 			<div class="row g-4 justify-content-center border-bottom py-3 my-3">
 				<div class="col-md-12 col-xl-7 text-center">
 					<div class="flex-wrap flex-center gap-4">
-						<!-- Direct Bank Transfer -->
-						<div>
-							<input type="radio" class="form-check-input bg-primary border-0" id="Transfer-1" name="PaymentMethod" value="Transfer">
-							<label class="form-check-label" for="Transfer-1">Direct Bank Transfer</label>
-						</div>
-						<!-- Check Payments -->
-						<div>
-							<input type="radio" class="form-check-input bg-primary border-0" id="Payments-1" name="PaymentMethod" value="Payments">
-							<label class="form-check-label" for="Payments-1">Check Payments</label>
-						</div>
 						<!-- Cash On Delivery -->
 						<div>
 							<input type="radio" class="form-check-input bg-primary border-0" id="Delivery-1" name="PaymentMethod" value="Delivery">
@@ -146,17 +136,20 @@
 
 			<!-- Hàng cho nút đặt hàng -->
 			<div class="row g-4 justify-content-center py-3">
-				<div class="col-12 text-center">
+				<div class="col-12 text-center flex-center">
 					<button type="submit" class="btn bg-red w-40 text-uppercase mb-2">
 						Đặt hàng
 					</button>
+					<div id="paypal-button-container" class="btn w-40 text-uppercase mb-2"></div>
 				</div>
+				
 			</div>
 		</form>
 	</div>
 </div>
 <!-- Checkout Page End -->
 @section Scripts {
+	<script src="https://www.paypal.com/sdk/js?client-id=@ViewBag.PaypalClientId&components=buttons"></script>
 	<Script>
 		$(document).ready(function () {
 			$("#GiongKhachHang").change(function () {
@@ -170,5 +163,61 @@
 				}
 			})
 		})
+		paypal.Buttons({
+			style: {
+				layout: 'vertical',
+				color: 'blue',
+				shape: 'rect',
+				label: 'paypal'
+			},
+
+			// ✅ Bổ sung dấu phẩy trước createOrder
+			async createOrder() {
+				try {
+					const response = await fetch("/Cart/create-paypal-order", {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						}
+					});
+
+					if (!response.ok) {
+						const error = await response.json();
+						throw new Error(error.message || "Lỗi tạo đơn hàng");
+					}
+
+					const order = await response.json();
+					return order.id; // ✅ Trả về id đơn hàng để PayPal xử lý
+				} catch (err) {
+					alert("Có lỗi: " + err.message);
+				}
+			},
+
+			async onApprove(data) {
+				try {
+					const response = await fetch(`/Cart/capture-paypal-order?orderID=${data.orderID}`, {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json"
+						},
+						body: JSON.stringify({
+							orderID: data.orderID
+						})
+					});
+
+					if (!response.ok) {
+						const error = await response.json();
+						throw new Error(error.message || "Lỗi xác nhận đơn hàng");
+					}
+
+					const details = await response.json();
+
+					alert(`Transaction completed by ${details.payer.name.given_name}`);
+					window.location.href = "/Cart/PaymentSuccess";
+				} catch (err) {
+					alert("Có lỗi: " + err.message);
+				}
+			}
+		}).render('#paypal-button-container');
 	</Script>
 }

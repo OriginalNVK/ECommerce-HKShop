@@ -345,6 +345,10 @@
       "PackagePath": "staticwebassets\\Hinh\\Others\\shopping_cart.png"
     },
     {
+      "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\background-website.png",
+      "PackagePath": "staticwebassets\\Hinh\\background-website.png"
+    },
+    {
       "Id": "D:\\Work\\HShop\\HShop\\HShop\\wwwroot\\Hinh\\heropage\\header_headphone_image.png",
       "PackagePath": "staticwebassets\\Hinh\\heropage\\header_headphone_image.png"
     },

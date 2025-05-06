@@ -2,7 +2,7 @@
 
 # 🛍️ HK Technology Shop
 
-*A Web Application for Technology Product Shopping using ASP.NET MVC* 💻
+_A Web Application for Technology Product Shopping using ASP.NET MVC_ 💻
 
 ![C#](https://img.shields.io/badge/C_Sharp-white?style=for-the-badge&logo=csharp&logoColor=239120)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-white?style=for-the-badge&logo=bootstrap&logoColor=7952B3)
@@ -14,11 +14,12 @@
 </div>
 
 ## 📘 Table of Contents
-1. [Introduction](#introduction) 🌟  
-2. [Technologies](#technologies) 🛠️  
-3. [Features](#features) 🔎  
-4. [Getting Started](#getting-started) 🚀  
-5. [Contact](#contact) 📫  
+
+1. [Introduction](#introduction) 🌟
+2. [Technologies](#technologies) 🛠️
+3. [Features](#features) 🔎
+4. [Getting Started](#getting-started) 🚀
+5. [Contact](#contact) 📫
 
 ---
 
@@ -39,13 +40,17 @@
 ## 🔎 Features
 
 ### 🎯 **Customer Flow**
+
 - Browse tech product catalog
 - Add products to cart
 - Place orders
 - Track shipping
 - Pay invoices
+- Register and log in to your account using JWT
+- Checkout using PayPal or Cash on Delivery (COD)
 
 ### 🛠️ **Admin Flow**
+
 - Manage products
 - Manage customers
 - Manage orders
@@ -67,12 +72,14 @@ Make sure you have the following installed:
 ### 📂 Installation & Setup
 
 1. **Clone the Repository**
+
    ```bash
    git clone https://github.com/OriginalNVK/ECommerce-HKShop.git
    cd ECommerce-HKShop
    ```
 
 2. **Configure the Database**
+
    - Open SQL Server Management Studio
    - Execute the SQL script located at: `HKShop/HShopDB.sql`
    - This will create and initialize the database.

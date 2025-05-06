@@ -35,6 +35,13 @@ namespace HShop
                 options.AccessDeniedPath = "/AccessDenied"; // Đã đăng nhập rồi 
             });
 
+            // Đăng ký paypalClient dạng Singleton() -  Chỉ 1 instance duy nhất trên toàn ứng dụng
+            builder.Services.AddSingleton(x => new PaypalClient(
+                builder.Configuration["PaypalOption:AppID"],
+                builder.Configuration["PaypalOption:AppSecret"],
+                builder.Configuration["PaypalOption:Mode"]
+            ));
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

@@ -13,9 +13,15 @@ namespace HShop.Controllers
     {
         private readonly Hshop2023Context db;
 
-        public CartController(Hshop2023Context context) => db = context;
+        private readonly PaypalClient _paymentClient;
 
-        private async Task<List<CartItem>> GetCart()
+		public CartController(Hshop2023Context context, PaypalClient paymentClient)
+		{
+			db = context;
+			_paymentClient = paymentClient;
+		}
+
+		private async Task<List<CartItem>> GetCart()
         {
             var maKH = HttpContext.User.Identity.IsAuthenticated ? HttpContext.User.FindFirst(MyConstant.CLAIM_CUSTOMERID)?.Value : "Guest";
             if(maKH == "Guest")
@@ -110,7 +116,7 @@ namespace HShop.Controllers
             {
                 return Redirect("/");
             }
-            
+            ViewBag.PaypalClientId = _paymentClient.ClientId;
             return View(Carts);
         }
 
@@ -184,5 +190,112 @@ namespace HShop.Controllers
             
             return View(CartItems);
         }
-    }
+
+        #region Payment
+        [Authorize]
+        [HttpPost("Cart/create-paypal-order")]
+        public async Task<IActionResult> CreatePaypalOrder(CancellationToken cancellationToken)
+        {
+            // Thông tin đơn hàng gửi qua paypal
+            var cartItems = await GetCart();
+            var tongTien = cartItems.Sum(p => p.ThanhTien).ToString();
+            var donViTienTe = "USD";
+            var maDonHangThamChieu = "DH" + DateTime.Now.Ticks.ToString();
+
+            try
+            {
+                var response = await _paymentClient.CreateOrder(tongTien, donViTienTe, maDonHangThamChieu);
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                var error = new
+                {
+                    ex.GetBaseException().Message
+                };
+                return BadRequest(error);
+            }
+        }
+
+        [Authorize]
+        public IActionResult PaymentSuccess()
+        {
+            return View("Success");
+		}
+
+		[Authorize]
+		[HttpPost("Cart/capture-paypal-order")]
+        public async Task<IActionResult> CapturePaypalOrder([FromQuery] string orderID, CancellationToken cancellationToken)
+        {
+			var customerID = HttpContext.User.Claims.SingleOrDefault(p => p.Type == MyConstant.CLAIM_CUSTOMERID)?.Value;
+			var carts = await db.Carts.Where(c => c.MaKh == customerID).ToListAsync();
+
+			try
+			{
+				var response = await _paymentClient.CaptureOrder(orderID);
+
+				// Lấy thông tin khách hàng từ DB
+				var khachHang = await db.KhachHangs.SingleOrDefaultAsync(k => k.MaKh == customerID);
+
+				// Tạo hóa đơn mới
+				var hoaDon = new HoaDon()
+				{
+					MaKh = customerID,
+					HoTen = khachHang?.HoTen ?? response.payer.name.given_name,
+					DiaChi = khachHang?.DiaChi ?? "Không có địa chỉ", // Nếu PayPal trả về shipping address thì có thể dùng nó
+					DienThoai = khachHang?.DienThoai ?? "Không rõ",
+					NgayDat = DateTime.Now,
+					CachThanhToan = "PayPal",
+					CachVanChuyen = "Grab", // Có thể cho chọn sau
+					MaTrangThai = 1, // Đơn hàng đã thanh toán
+					GhiChu = "Thanh toán qua PayPal"
+				};
+
+				db.Database.BeginTransaction();
+				try
+				{
+					await db.HoaDons.AddAsync(hoaDon);
+					await db.SaveChangesAsync();
+
+					var cthds = new List<ChiTietHd>();
+					foreach (var item in carts)
+					{
+						cthds.Add(new ChiTietHd()
+						{
+							MaHd = hoaDon.MaHd,
+							SoLuong = item.SoLuong,
+							DonGia = item.DonGia,
+							MaHh = item.MaHh,
+							GiamGia = 0
+						});
+					}
+
+					await db.ChiTietHds.AddRangeAsync(cthds);
+
+					// Xóa giỏ hàng
+					db.Carts.RemoveRange(carts);
+
+					await db.SaveChangesAsync();
+					db.Database.CommitTransaction();
+
+					return Ok(response);
+				}
+				catch (Exception ex)
+				{
+					db.Database.RollbackTransaction();
+					return BadRequest(new { Message = "Lỗi lưu hóa đơn: " + ex.Message });
+				}
+			}
+			catch (Exception ex)
+			{
+				var error = new
+				{
+					ex.GetBaseException().Message
+				};
+				return BadRequest(error);
+			}
+		}
+		#endregion
+	}
 }
