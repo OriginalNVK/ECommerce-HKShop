@@ -9,7 +9,7 @@ _A Web Application for Technology Product Shopping using ASP.NET MVC_ 💻
 ![HTML5](https://img.shields.io/badge/HTML-white?style=for-the-badge&logo=html5&logoColor=E34F26)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-white?style=for-the-badge&logo=microsoftsqlserver&logoColor=CC2927)
 
-<img width="600px" src="https://your-image-link-here.com/image.jpg" alt="Screenshot of HK Technology Shop">
+<img width="600px" src="./HShop/HShop/wwwroot/Hinh/background-website.png" alt="Screenshot of HK Technology Shop">
 
 </div>
 
